@@ -5,6 +5,7 @@ div {
 
 * {
   box-sizing: border-box;
+  color: #fff;
 }
 
 html {
@@ -13,9 +14,13 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 5vw;
   height: 100%;
   background-color: #222d32;
+}
+
+#main-grid {
+  display: grid;
 }
 
 /*# sourceMappingURL=styles.css.map */

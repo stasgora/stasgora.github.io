@@ -1,0 +1,9 @@
+=transform($property)
+  -webkit-transform: $property
+  transform: $property
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
