@@ -48,7 +48,7 @@
     transform: rotate(30deg);
   }
 }
-@-webkit-keyframes loading {
+@-webkit-keyframes loading-rotation {
   0% {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
@@ -58,7 +58,7 @@
     transform: rotate(210deg);
   }
 }
-@keyframes loading {
+@keyframes loading-rotation {
   0% {
     -webkit-transform: rotate(30deg);
     transform: rotate(30deg);
@@ -68,7 +68,7 @@
     transform: rotate(210deg);
   }
 }
-@-webkit-keyframes morph {
+@-webkit-keyframes loading-morph {
   0% {
     width: calc((8vw + 3rem) * 0.5);
   }
@@ -88,7 +88,7 @@
     width: calc((8vw + 3rem) * 1.6);
   }
 }
-@keyframes morph {
+@keyframes loading-morph {
   0% {
     width: calc((8vw + 3rem) * 0.5);
   }
@@ -147,7 +147,7 @@
   }
 }
 .loading-anim {
-  animation: loading-start forwards, loading infinite, morph alternate infinite;
+  animation: loading-start forwards, loading-rotation infinite, loading-morph alternate infinite;
   animation-delay: 0s, 2s, 2s;
   animation-duration: 2s, 2s, 10s;
   animation-timing-function: cubic-bezier(0.7, 0, 0.7, 1), ease-in-out, ease-in-out;
@@ -158,8 +158,10 @@
 }
 
 .logo-box-pos {
-  top: -1rem !important;
-  left: -2rem !important;
+  top: calc((8vw + 3rem) / -2 + (2vw + 1rem) / 2 + 2vw) !important;
+  left: calc((8vw + 3rem) * 1.6 / -2 + (2vw + 1rem) / 2 + 5vw) !important;
+  transition: all 1s ease-in-out 0.5s;
+  transition-property: top, left;
 }
 
 #loading-cover {
@@ -169,15 +171,16 @@
   right: 0;
   bottom: 0;
   background-color: #222d32;
-  transition: opacity 1s ease-in-out 0.5s;
+  transition: opacity 1s ease-in-out 0.5s, visibility 0s ease 1.5s;
+  z-index: 1;
 }
 
 .loaded > #loading-cover {
   opacity: 0;
+  visibility: hidden;
 }
-
 .loaded #logo-box > div {
-  width: calc((8vw + 3rem)) !important;
+  width: calc((8vw + 3rem));
   border-radius: 50% !important;
   transition: all 0.5s cubic-bezier(0.4, 0, 1, 0.8);
 }
@@ -190,8 +193,6 @@
   height: calc((8vw + 3rem));
   top: calc(40% - (8vw + 3rem) / 2);
   left: calc(50% - (8vw + 3rem) * 1.6 / 2);
-  transition: all 1s ease-in-out 0.5s;
-  transition-property: top, left;
 }
 #logo-box > div {
   height: calc((8vw + 3rem));

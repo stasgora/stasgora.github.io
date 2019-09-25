@@ -30,7 +30,6 @@ $logo-box-top: calc(#{$logo-top-pos} - #{$logo-size} / 2)
 $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
 
 
-
 +keyframes(loading-start)
   0%
     width: 0
@@ -51,13 +50,13 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
     border-radius: $logo-border-radius
     +transform(rotate(30deg))
 
-+keyframes(loading)
++keyframes(loading-rotation)
   0%
     +transform(rotate(30deg))
   100%
     +transform(rotate(210deg))
 
-+keyframes(morph)
++keyframes(loading-morph)
   @for $i from 0 through $morph-step-count
     $step: $i / $morph-step-count
     #{$step * 100%}
@@ -79,7 +78,7 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
     +transform(rotate(30deg))
 
 .loading-anim
-  animation: loading-start forwards, loading infinite, morph alternate infinite
+  animation: loading-start forwards, loading-rotation infinite, loading-morph alternate infinite
   animation-delay: 0s, $load-start-duration, $load-start-duration
   animation-duration: $load-start-duration, $load-cycle-duration, $load-cycle-duration * $morph-step-count
   animation-timing-function: cubic-bezier(0.7, 0, 0.7, 1), ease-in-out, ease-in-out
@@ -88,8 +87,10 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
   animation: loading-finish forwards $load-finish-duration ease-out
 
 .logo-box-pos
-  top: -1rem !important
-  left: -2rem !important
+  top: calc(#{$logo-size} / -2 + #{$final-logo-size} / 2 + #{$top-margin}) !important
+  left: calc(#{$logo-box-width} / -2 + #{$final-logo-size} / 2 + #{$page-margin}) !important
+  transition: all $load-finish-duration ease-in-out $load-retract-duration
+  transition-property: top, left
 
 #loading-cover
   position: fixed
@@ -98,15 +99,18 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
   right: 0
   bottom: 0
   background-color: $bg-color
-  transition: opacity $load-finish-duration ease-in-out $load-retract-duration
+  transition: opacity $load-finish-duration ease-in-out $load-retract-duration, visibility 0s ease $load-finish-duration + $load-retract-duration
+  z-index: 1
 
-.loaded > #loading-cover
-  opacity: 0
+.loaded
+  > #loading-cover
+    opacity: 0
+    visibility: hidden
 
-.loaded #logo-box > div
-  width: $computed-logo-size !important
-  border-radius: 50% !important
-  transition: all $load-retract-duration cubic-bezier(0.4, 0, 1, 0.8)
+  #logo-box > div
+    width: $computed-logo-size
+    border-radius: 50% !important
+    transition: all $load-retract-duration cubic-bezier(0.4, 0, 1, 0.8)
 
 #logo-box
   display: inline-block
@@ -118,9 +122,6 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
 
   top: $logo-box-top
   left: calc(50% - #{$logo-box-width} / 2)
-
-  transition: all $load-finish-duration ease-in-out $load-retract-duration
-  transition-property: top, left
 
   > div
     height: $computed-logo-size
