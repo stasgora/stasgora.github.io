@@ -1,24 +1,27 @@
+const introKey = 'loading-intro';
+const introPlayed = 'played';
+
 $(() => {
-	let introKey = 'loading-intro';
-	let introPlayed = 'played';
 	if(sessionStorage.getItem(introKey) !== introPlayed) {
 		setTimeout(() => {
-			$(window).bind('scroll', () => {
-				finishLoading();
-				sessionStorage.setItem(introKey, introPlayed);
-				$(window).unbind('scroll');
-			});
+			$(window).bind('scroll', handleScroll);
 		}, 2000);
 	} else skipLoading();
 });
 
+function handleScroll() {
+	finishLoading();
+	sessionStorage.setItem(introKey, introPlayed);
+	$(window).unbind('scroll', handleScroll);
+}
+
 function finishLoading() {
-	let logo = $('#logo-box > div');
+	const logo = $('#logo-box > div');
 	preserveProperties(logo, ['width', 'transform']);
 	//switch animations
 	logo.removeClass('loading-anim');
 	setTimeout(() => {
-		let logoBox = $('#logo-box');
+		const logoBox = $('#logo-box');
 		logoBox.addClass('logo-box-pos');
 		//divided to work in firefox
 		$('body').addClass('loaded');
@@ -35,8 +38,8 @@ function finishLoading() {
 }
 
 function skipLoading() {
-	let logo = $('#logo-box > div');
-	let logoBox = $('#logo-box');
+	const logo = $('#logo-box > div');
+	const logoBox = $('#logo-box');
 	$('body').addClass('loaded');
 	logoBox.addClass('logo-box-pos');
 	logoBox.css('transition-property', 'none');

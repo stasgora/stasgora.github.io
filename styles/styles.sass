@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap')
 
 $link-bubble-size: calc(.8vw + 1.2rem)
+$header-height: 8vw
 
 div, section, video
   display: block
@@ -15,7 +16,6 @@ div, section, video
 
 html
   font-size: 100%
-  height: 100%
 
 +keyframes(scroll-hint)
   0%
@@ -25,7 +25,6 @@ html
 
 body
   margin: 0
-  height: 100%
   background-color: $bg-color
 
   #loading-cover
@@ -57,17 +56,27 @@ body
         width: calc(2vw + 1.2rem)
         fill: $text-color
 
-  header
-    padding: calc(#{$top-margin}) $page-margin 0
-    height: calc(4vw + 1rem)
-    box-sizing: initial
-    background-image: linear-gradient(lighten($bg-color, 2%), $bg-color)
+  .header-unpinned
+    transform: translateY(-$header-height)
+  .header-pinned
+    transform: translateY(0)
 
-    > div:nth-child(2)
-      font-family: 'Roboto Slab', serif
-      font-weight: 700
-      font-size: calc(1.4vw + 0.7rem)
-      padding-left: calc(2vw + 2rem)
+  header
+    width: 100%
+    height: $header-height
+    position: fixed
+    display: flex
+    align-items: center
+    z-index: 1
+    padding: 0 $page-margin
+    transition: transform 0.5s ease-in-out
+
+  #title
+    margin-top: calc(2vw + 1rem)
+    font-family: 'Roboto Slab', serif
+    font-weight: 700
+    font-size: calc(1.4vw + 0.7rem)
+    padding-left: calc(#{$page-margin} + #{$final-logo-size} * 1.5)
 
   main
     margin: 0 $page-margin
@@ -98,6 +107,10 @@ body
         padding: 1rem
         font-size: 1.4rem
       font-weight: 700
+
+    > section:nth-of-type(1)
+      header
+
 
   footer
     width: 100%
