@@ -87,7 +87,7 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
   animation: loading-finish forwards $load-finish-duration ease-out
 
 .logo-box-pos
-  top: calc(#{$logo-size} / -2 + #{$final-logo-size} / 2 + #{$top-margin}) !important
+  top: calc(#{$logo-size} / -2 + #{$final-logo-size} / 2 + 2vw + 1rem) !important
   left: calc(#{$logo-box-width} / -2 + #{$final-logo-size} / 2 + #{$page-margin}) !important
   transition: all $load-finish-duration ease-in-out $load-retract-duration
   transition-property: top, left
@@ -107,7 +107,7 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
 
 #logo-box
   display: inline-block
-  position: absolute
+  position: fixed
   z-index: 1
 
   width: calc(#{$logo-box-width})

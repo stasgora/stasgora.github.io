@@ -1,8 +1,15 @@
 $(() => {
-	$(window).bind('scroll', () => {
-		finishLoading();
-		$(window).unbind('scroll');
-	});
+	let introKey = 'loading-intro';
+	let introPlayed = 'played';
+	if(sessionStorage.getItem(introKey) !== introPlayed) {
+		setTimeout(() => {
+			$(window).bind('scroll', () => {
+				finishLoading();
+				sessionStorage.setItem(introKey, introPlayed);
+				$(window).unbind('scroll');
+			});
+		}, 2000);
+	} else skipLoading();
 });
 
 function finishLoading() {
@@ -25,6 +32,17 @@ function finishLoading() {
 			setTimeout(() => logoBox.css('transition-property', 'none'), 1000);
 		}, 400);
 	}, 1);
+}
+
+function skipLoading() {
+	let logo = $('#logo-box > div');
+	let logoBox = $('#logo-box');
+	$('body').addClass('loaded');
+	logoBox.addClass('logo-box-pos');
+	logoBox.css('transition-property', 'none');
+	logo.addClass('loading-transition-anim');
+	logo.css('animation-duration', '0s');
+	$('#loading-cover').css('transition', 'none');
 }
 
 function preserveProperties(element, properties) {
