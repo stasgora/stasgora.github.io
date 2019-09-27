@@ -1,7 +1,7 @@
 $(() => {
-	$('body').keypress(event => {
-		if (event.which === 'l'.charCodeAt(0))
-			finishLoading();
+	$(window).bind('scroll', () => {
+		finishLoading();
+		$(window).unbind('scroll');
 	});
 });
 

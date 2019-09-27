@@ -1,6 +1,7 @@
 @import "common/variables"
+@import "common/templates"
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap')
 
 div, section, video
   display: block
@@ -14,25 +15,60 @@ html
   font-size: 100%
   height: 100%
 
++keyframes(scroll-hint)
+  0%
+    opacity: 0
+  100%
+    opacity: 0.2
+
 body
   margin: 0
   height: 100%
   background-color: $bg-color
 
+  #loading-cover
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $bg-color
+    z-index: 1
+
+    div
+      position: absolute
+      bottom: 5%
+      width: 100%
+
+      text-align: center
+      font-weight: 700
+      color: $text-color
+      font-size: calc(.6vw + .3rem)
+      text-transform: uppercase
+
+      opacity: 0
+      animation: scroll-hint 2s ease-in-out 2s forwards
+
+      svg
+        display: block
+        margin: calc(.8vw + 0.4rem) auto
+        width: calc(2vw + 1.2rem)
+        fill: $text-color
+
   header
     margin: 0 $page-margin
-    padding-top: $top-margin
+    padding-top: calc(#{$top-margin})
     height: calc(4vw + 1rem)
+    box-sizing: initial
 
     > div:nth-child(2)
       font-family: 'Roboto Slab', serif
-      color: mix($text-color, $main-color, 75%)
-      font-size: calc(1.5vw + 0.7rem)
+      font-weight: 700
+      font-size: calc(1vw + 0.5rem)
       padding-left: calc(2vw + 2rem)
 
   main
     margin: 0 $page-margin
-    height: 80%
     padding: 6vw
     display: grid
     grid-gap: 2rem
@@ -44,14 +80,22 @@ body
 
     > section
       width: 100%
-      height: 100%
       overflow: hidden
 
       > video
         border-radius: 1rem
         max-width: 100%
-        max-height: 100%
+        max-height: 30rem
         margin: 0 auto
+
+      > span:nth-of-type(1)
+        display: block
+        width: 100%
+        text-align: center
+        font-family: 'Roboto Slab', serif
+        padding: 1rem
+        font-size: 1.4rem
+      font-weight: 700
 
   > #ie-text
     z-index: 1

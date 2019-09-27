@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
 div, section, video {
   display: block;
   position: relative;
@@ -6,7 +6,7 @@ div, section, video {
 
 * {
   box-sizing: border-box;
-  color: #fff;
+  color: #c1d2e4;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -15,25 +15,68 @@ html {
   height: 100%;
 }
 
+@-webkit-keyframes scroll-hint {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+@keyframes scroll-hint {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 body {
   margin: 0;
   height: 100%;
   background-color: #222d32;
 }
+body #loading-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #222d32;
+  z-index: 1;
+}
+body #loading-cover div {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  color: #c1d2e4;
+  font-size: calc(.6vw + .3rem);
+  text-transform: uppercase;
+  opacity: 0;
+  animation: scroll-hint 2s ease-in-out 2s forwards;
+}
+body #loading-cover div svg {
+  display: block;
+  margin: calc(.8vw + 0.4rem) auto;
+  width: calc(2vw + 1.2rem);
+  fill: #c1d2e4;
+}
 body header {
   margin: 0 5vw;
-  padding-top: 2vw;
+  padding-top: calc(6vw + 4rem);
   height: calc(4vw + 1rem);
+  box-sizing: initial;
 }
 body header > div:nth-child(2) {
   font-family: "Roboto Slab", serif;
-  color: #c1d2e4;
-  font-size: calc(1.5vw + 0.7rem);
+  font-weight: 700;
+  font-size: calc(1vw + 0.5rem);
   padding-left: calc(2vw + 2rem);
 }
 body main {
   margin: 0 5vw;
-  height: 80%;
   padding: 6vw;
   display: grid;
   grid-gap: 2rem;
@@ -47,14 +90,22 @@ body main {
 }
 body main > section {
   width: 100%;
-  height: 100%;
   overflow: hidden;
+  font-weight: 700;
 }
 body main > section > video {
   border-radius: 1rem;
   max-width: 100%;
-  max-height: 100%;
+  max-height: 30rem;
   margin: 0 auto;
+}
+body main > section > span:nth-of-type(1) {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  padding: 1rem;
+  font-size: 1.4rem;
 }
 body > #ie-text {
   z-index: 1;

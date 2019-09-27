@@ -93,14 +93,7 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
   transition-property: top, left
 
 #loading-cover
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  background-color: $bg-color
   transition: opacity $load-finish-duration ease-in-out $load-retract-duration, visibility 0s ease $load-finish-duration + $load-retract-duration
-  z-index: 1
 
 .loaded
   > #loading-cover

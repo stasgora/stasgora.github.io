@@ -158,21 +158,14 @@
 }
 
 .logo-box-pos {
-  top: calc((8vw + 3rem) / -2 + (2vw + 1rem) / 2 + 2vw) !important;
+  top: calc((8vw + 3rem) / -2 + (2vw + 1rem) / 2 + 6vw + 4rem) !important;
   left: calc((8vw + 3rem) * 1.6 / -2 + (2vw + 1rem) / 2 + 5vw) !important;
   transition: all 1s ease-in-out 0.5s;
   transition-property: top, left;
 }
 
 #loading-cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #222d32;
   transition: opacity 1s ease-in-out 0.5s, visibility 0s ease 1.5s;
-  z-index: 1;
 }
 
 .loaded > #loading-cover {
