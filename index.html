@@ -4,81 +4,86 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>WIP | Stanisław Góra</title>
-		<meta property="og:title" content="Stanisław Góra" />
-		<meta name="twitter:title" content="Stanisław Góra" />
+		<meta content="Stanisław Góra" property="og:title"/>
+		<meta content="Stanisław Góra" name="twitter:title"/>
 
-		<meta name="description" content="Stanisław Góra is a software developer with experience in both backend and frontend.
-		Highlights include Java ecosystem, Web & Mobile development knowledge among others.">
-		<meta property="og:description" content="Stanisław Góra is a software developer with experience in both backend and frontend.
-		Highlights include Java ecosystem, Web & Mobile development knowledge among others." />
-		<meta name="twitter:description" content="Stanisław Góra is a software developer with experience in both backend and frontend.
-		Highlights include Java ecosystem, Web & Mobile development knowledge among others." />
+		<meta content="Stanisław Góra is a software developer with experience in both backend and frontend.
+		Highlights include Java ecosystem, Web & Mobile development knowledge among others." name="description">
+		<meta content="Stanisław Góra is a software developer with experience in both backend and frontend.
+		Highlights include Java ecosystem, Web & Mobile development knowledge among others." property="og:description"/>
+		<meta content="Stanisław Góra is a software developer with experience in both backend and frontend.
+		Highlights include Java ecosystem, Web & Mobile development knowledge among others." name="twitter:description"/>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#074C94">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="#074C94" name="theme-color">
 
 		<!-- generics -->
-		<link rel="icon" href="assets/favicon/favicon-32.png" sizes="32x32">
-		<link rel="icon" href="assets/favicon/favicon-57.png" sizes="57x57">
-		<link rel="icon" href="assets/favicon/favicon-76.png" sizes="76x76">
-		<link rel="icon" href="assets/favicon/favicon-96.png" sizes="96x96">
-		<link rel="icon" href="assets/favicon/favicon-128.png" sizes="128x128">
-		<link rel="icon" href="assets/favicon/favicon-192.png" sizes="192x192">
-		<link rel="icon" href="assets/favicon/favicon-228.png" sizes="228x228">
+		<link href="assets/favicons/favicon-32.png" rel="icon" sizes="32x32">
+		<link href="assets/favicons/favicon-57.png" rel="icon" sizes="57x57">
+		<link href="assets/favicons/favicon-76.png" rel="icon" sizes="76x76">
+		<link href="assets/favicons/favicon-96.png" rel="icon" sizes="96x96">
+		<link href="assets/favicons/favicon-128.png" rel="icon" sizes="128x128">
+		<link href="assets/favicons/favicon-192.png" rel="icon" sizes="192x192">
+		<link href="assets/favicons/favicon-228.png" rel="icon" sizes="228x228">
 		<!-- Android -->
-		<link rel="shortcut icon" sizes="196x196" href="assets/favicon/favicon-196.png">
+		<link href="assets/favicons/favicon-196.png" rel="shortcut icon" sizes="196x196">
 		<!-- iOS -->
-		<link rel="apple-touch-icon" href="assets/favicon/favicon-120.png" sizes="120x120">
-		<link rel="apple-touch-icon" href="assets/favicon/favicon-152.png" sizes="152x152">
-		<link rel="apple-touch-icon" href="assets/favicon/favicon-180.png" sizes="180x180">
+		<link href="assets/favicons/favicon-120.png" rel="apple-touch-icon" sizes="120x120">
+		<link href="assets/favicons/favicon-152.png" rel="apple-touch-icon" sizes="152x152">
+		<link href="assets/favicons/favicon-180.png" rel="apple-touch-icon" sizes="180x180">
 		<!-- Windows 8 IE 10-->
-		<meta name="msapplication-TileColor" content="#FFFFFF">
-		<meta name="msapplication-TileImage" content="images/favicon/favicon-144.png">
+		<meta content="#FFFFFF" name="msapplication-TileColor">
+		<meta content="images/favicon/favicon-144.png" name="msapplication-TileImage">
 		<!— Windows 8.1 + IE11 and above —>
-		<meta name="msapplication-config" content="images/favicon/browserconfig.xml" />
+		<meta content="images/favicon/browserconfig.xml" name="msapplication-config"/>
 
-		<meta name="twitter:card" content="summary">
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://stasgora.github.io" />
-		<meta name="twitter:url" content="https://stasgora.github.io" />
-		<meta property="og:image" content="https://stasgora.github.io/images/profile-pic.png" />
-		<meta name="twitter:image" content="https://stasgora.github.io/images/profile-pic.png" />
-		<meta name="twitter:site" content="@StasGora" />
+		<meta content="summary" name="twitter:card">
+		<meta content="website" property="og:type"/>
+		<meta content="https://stasgora.github.io" property="og:url"/>
+		<meta content="https://stasgora.github.io" name="twitter:url"/>
+		<meta content="https://stasgora.github.io/images/profile-pic.png" property="og:image"/>
+		<meta content="https://stasgora.github.io/images/profile-pic.png" name="twitter:image"/>
+		<meta content="@StasGora" name="twitter:site"/>
 
-		<link rel="canonical" href="https://stasgora.github.io">
-		<meta name="google-site-verification" content="3Vee9qNtwymCULcX4tKpaW59Xzcs0icxBL08NR8S2CE" />
+		<link href="https://stasgora.github.io" rel="canonical">
+		<meta content="3Vee9qNtwymCULcX4tKpaW59Xzcs0icxBL08NR8S2CE" name="google-site-verification"/>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148599570-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+
 			gtag('js', new Date());
 
 			gtag('config', 'UA-148599570-1');
 		</script>
 
-		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		<script crossorigin="anonymous"
 		        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-				crossorigin="anonymous"></script>
+		        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="styles/styles.css">
-		<link rel="stylesheet" type="text/css" href="styles/loading-logo.css">
+		<link href="styles/styles.css" rel="stylesheet" type="text/css">
+		<link href="styles/loading-logo.css" rel="stylesheet" type="text/css">
 
-		<script type="application/javascript" src="scripts/loading.js"></script>
+		<script src="scripts/loading.js" type="application/javascript"></script>
 	</head>
 	<body>
 		<div id="loading-cover">
 			<div>
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-					<path d="m 12,0.90039062 c -4.1657005,0 -7.5644531,3.39876948 -7.5644531,7.56445318 v 7.0703122 c 0,4.165684 3.3987483,7.564453 7.5644531,7.564453 4.165683,0 7.564453,-3.398769 7.564453,-7.564453 V 8.4648438 C 19.564453,4.2991603 16.165679,0.90039062 12,0.90039062 Z m 0,1.94921878 c 3.112431,0 5.615234,2.5028076 5.615234,5.6152344 v 7.0703122 c 0,3.112427 -2.502807,5.615235 -5.615234,5.615235 -3.1124552,0 -5.6152344,-2.502808 -5.6152344,-5.615235 V 8.4648438 C 6.3847656,5.3524172 8.8875405,2.8496094 12,2.8496094 Z" />
-					<path d="m 11.984375,5.4902344 a 0.97453969,0.97453969 0 0 0 -0.958984,0.9863281 v 1.9414063 a 0.974609,0.974609 0 1 0 1.949218,0 V 6.4765625 A 0.97453969,0.97453969 0 0 0 11.984375,5.4902344 Z" />
+				<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+					<path d="m 12,0.90039062 c -4.1657005,0 -7.5644531,3.39876948 -7.5644531,7.56445318 v 7.0703122 c 0,4.165684 3.3987483,7.564453 7.5644531,7.564453 4.165683,0 7.564453,-3.398769 7.564453,-7.564453 V 8.4648438 C 19.564453,4.2991603 16.165679,0.90039062 12,0.90039062 Z m 0,1.94921878 c 3.112431,0 5.615234,2.5028076 5.615234,5.6152344 v 7.0703122 c 0,3.112427 -2.502807,5.615235 -5.615234,5.615235 -3.1124552,0 -5.6152344,-2.502808 -5.6152344,-5.615235 V 8.4648438 C 6.3847656,5.3524172 8.8875405,2.8496094 12,2.8496094 Z"/>
+					<path d="m 11.984375,5.4902344 a 0.97453969,0.97453969 0 0 0 -0.958984,0.9863281 v 1.9414063 a 0.974609,0.974609 0 1 0 1.949218,0 V 6.4765625 A 0.97453969,0.97453969 0 0 0 11.984375,5.4902344 Z"/>
 				</svg>
 				Scroll down to begin
 			</div>
 		</div>
 		<!--[if IE]>
 		<div id="ie-text">You are using an <strong>outdated</strong> browser. <br>
-			Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</div>
+			Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.
+		</div>
 		<![endif]-->
 		<header>
 			<div id="logo-box">
@@ -89,23 +94,37 @@
 		<main>
 			<section>
 				<video autoplay loop muted>
-					<source src="assets/voronoi-clip.mp4" type="video/mp4">
+					<source src="assets/videos/voronoi-clip.mp4" type="video/mp4">
 				</video>
 				<span>Mesh Editor</span>
 			</section>
 			<section>
 				<video autoplay loop muted>
-					<source src="assets/code-clip.mp4" type="video/mp4">
+					<source src="assets/videos/code-clip.mp4" type="video/mp4">
 				</video>
 				<span>Observetree Library</span>
 			</section>
 		</main>
 		<footer>
-			<section class="hex-grid" id="links">
-				<a></a>
-				<a></a>
-				<a></a>
+			<section>
+				<a href="https://www.linkedin.com/in/stanis%C5%82aw-g%C3%B3ra-8602b8159/" target="_blank" title="LinkedIn">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path d="m 20.447,20.452 h -3.554 v -5.569 c 0,-1.328 -0.027,-3.037 -1.852,-3.037 -1.853,0 -2.136,1.445 -2.136,2.939 v 5.667 H 9.351 V 9 h 3.414 v 1.561 h 0.046 c 0.477,-0.9 1.637,-1.85 3.37,-1.85 3.601,0 4.267,2.37 4.267,5.455 v 6.286 z M 5.337,7.433 c -1.144,0 -2.063,-0.926 -2.063,-2.065 0,-1.138 0.92,-2.063 2.063,-2.063 1.14,0 2.064,0.925 2.064,2.063 0,1.139 -0.925,2.065 -2.064,2.065 z M 7.119,20.452 H 3.555 V 9 h 3.564 z"/>
+					</svg>
+				</a>
+				<a href="https://github.com/stasgora" target="_blank" title="GitHub">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+					</svg>
+				</a>
+				<a href="mailto:stasgora@gmail.com" target="_blank" title="Email">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+						<path d="M0 0h24v24H0V0z" fill="none"/>
+						<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 14H5c-.55 0-1-.45-1-1V8l6.94 4.34c.65.41 1.47.41 2.12 0L20 8v9c0 .55-.45 1-1 1zm-7-7L4 6h16l-8 5z"/>
+					</svg>
+				</a>
 			</section>
+			&copy; 2019 Stanisław Góra. All rights reserved
 		</footer>
 	</body>
 </html>
