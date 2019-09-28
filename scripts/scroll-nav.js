@@ -21,6 +21,13 @@ $(() => {
 	}, 1000);
 	navButtons[0].click(() => onNavButtonPress(0));
 	navButtons[1].click(() => onNavButtonPress(1));
+
+	$(document).keydown(event => {
+		if(event.which === 37)
+			onNavButtonPress(0);
+		else if(event.which === 39)
+			onNavButtonPress(1);
+	});
 });
 
 function onNavButtonPress(index) {

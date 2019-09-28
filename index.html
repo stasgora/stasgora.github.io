@@ -65,11 +65,14 @@
 		        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-		<link href="styles/styles.css" rel="stylesheet" type="text/css">
+		<link href="styles/site-styles.css" rel="stylesheet" type="text/css">
+		<link href="styles/mesh-styles.css" rel="stylesheet" type="text/css">
 		<link href="styles/loading-logo.css" rel="stylesheet" type="text/css">
+		<link href="styles/experience-styles.css" rel="stylesheet" type="text/css">
 
 		<script src="scripts/loading-logo.js" type="application/javascript"></script>
 		<script src="scripts/scroll-nav.js" type="application/javascript"></script>
+		<script src="scripts/mesh-properties.js" type="application/javascript"></script>
 	</head>
 	<body>
 		<div id="loading-cover">
@@ -96,7 +99,58 @@
 					<source src="assets/videos/voronoi-clip.mp4" type="video/mp4">
 				</video>
 				<span>Mesh Editor</span>
-
+				<section id="mesh-properties">
+					<div>
+						<div class="mesh-checkbox">
+							<input id="tri-property" type="checkbox" data-svg-link="mesh-tri" checked>
+							<label for="tri-property">Triangulation</label>
+						</div>
+						<div>
+							<div class="mesh-checkbox">
+								<input id="tri-surfaces-property" type="checkbox" data-svg-link="mesh-tri-s" checked>
+								<label for="tri-surfaces-property">Surfaces</label>
+							</div>
+							<div class="mesh-checkbox">
+								<input id="tri-lines-property" type="checkbox" data-svg-link="mesh-tri-l" checked>
+								<label for="tri-lines-property">Lines</label>
+							</div>
+							<div class="mesh-checkbox">
+								<input id="tri-points-property" type="checkbox" data-svg-link="mesh-tri-p">
+								<label for="tri-points-property">Points</label>
+							</div>
+						</div>
+						<div class="mesh-checkbox">
+							<input id="vor-property" type="checkbox" data-svg-link="mesh-vor" checked>
+							<label for="vor-property">Voronoi diagram</label>
+						</div>
+						<div>
+							<div class="mesh-checkbox">
+								<input id="vor-surfaces-property" type="checkbox" data-svg-link="mesh-vor-s">
+								<label for="vor-surfaces-property">Surfaces</label>
+							</div>
+							<div class="mesh-checkbox">
+								<input id="vor-lines-property" type="checkbox" data-svg-link="mesh-vor-l">
+								<label for="vor-lines-property">Lines</label>
+							</div>
+							<div class="mesh-checkbox">
+								<input id="vor-points-property" type="checkbox" data-svg-link="mesh-vor-p">
+								<label for="vor-points-property">Points</label>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div id="mesh-tri">
+							<img id="mesh-tri-s" src="assets/svg/mesh/tri-s.svg" alt="Mesh triangles">
+							<img id="mesh-tri-l" src="assets/svg/mesh/tri-l.svg" alt="Mesh lines">
+							<img id="mesh-tri-p" src="assets/svg/mesh/tri-p.svg" alt="Mesh points">
+						</div>
+						<div id="mesh-vor">
+							<img id="mesh-vor-s" src="assets/svg/mesh/vor-s.svg" alt="Mesh voronoi regions">
+							<img id="mesh-vor-l" src="assets/svg/mesh/vor-l.svg" alt="Mesh lines">
+							<img id="mesh-vor-p" src="assets/svg/mesh/vor-p.svg" alt="Mesh points">
+						</div>
+					</div>
+				</section>
 			</section>
 			<section>
 				<video autoplay loop muted>
@@ -125,22 +179,33 @@
 			<section>
 				<a href="https://www.linkedin.com/in/stanis%C5%82aw-g%C3%B3ra-8602b8159/" target="_blank" title="LinkedIn">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-						<path d="m 20.447,20.452 h -3.554 v -5.569 c 0,-1.328 -0.027,-3.037 -1.852,-3.037 -1.853,0 -2.136,1.445 -2.136,2.939 v 5.667 H 9.351 V 9 h 3.414 v 1.561 h 0.046 c 0.477,-0.9 1.637,-1.85 3.37,-1.85 3.601,0 4.267,2.37 4.267,5.455 v 6.286 z M 5.337,7.433 c -1.144,0 -2.063,-0.926 -2.063,-2.065 0,-1.138 0.92,-2.063 2.063,-2.063 1.14,0 2.064,0.925 2.064,2.063 0,1.139 -0.925,2.065 -2.064,2.065 z M 7.119,20.452 H 3.555 V 9 h 3.564 z"/>
+						<use xlink:href="#linkedIn-icon"></use>
 					</svg>
 				</a>
 				<a href="https://github.com/stasgora" target="_blank" title="GitHub">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-						<path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+						<use xlink:href="#github-icon"></use>
 					</svg>
 				</a>
 				<a href="mailto:stasgora@gmail.com" target="_blank" title="Email">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-						<path d="M0 0h24v24H0V0z" fill="none"/>
-						<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 14H5c-.55 0-1-.45-1-1V8l6.94 4.34c.65.41 1.47.41 2.12 0L20 8v9c0 .55-.45 1-1 1zm-7-7L4 6h16l-8 5z"/>
+						<use xlink:href="#mail-icon"></use>
 					</svg>
 				</a>
 			</section>
 			&copy; 2019 Stanisław Góra. All rights reserved
 		</footer>
+		<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+			<symbol id="linkedIn-icon" viewBox="0 0 24 24">
+				<path d="m 20.447,20.452 h -3.554 v -5.569 c 0,-1.328 -0.027,-3.037 -1.852,-3.037 -1.853,0 -2.136,1.445 -2.136,2.939 v 5.667 H 9.351 V 9 h 3.414 v 1.561 h 0.046 c 0.477,-0.9 1.637,-1.85 3.37,-1.85 3.601,0 4.267,2.37 4.267,5.455 v 6.286 z M 5.337,7.433 c -1.144,0 -2.063,-0.926 -2.063,-2.065 0,-1.138 0.92,-2.063 2.063,-2.063 1.14,0 2.064,0.925 2.064,2.063 0,1.139 -0.925,2.065 -2.064,2.065 z M 7.119,20.452 H 3.555 V 9 h 3.564 z"></path>
+			</symbol>
+			<symbol id="github-icon" viewBox="0 0 24 24">
+				<path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+			</symbol>
+			<symbol id="mail-icon" viewBox="0 0 24 24">
+				<path d="M0 0h24v24H0V0z" fill="none"></path>
+				<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1 14H5c-.55 0-1-.45-1-1V8l6.94 4.34c.65.41 1.47.41 2.12 0L20 8v9c0 .55-.45 1-1 1zm-7-7L4 6h16l-8 5z"></path>
+			</symbol>
+		</svg>
 	</body>
 </html>

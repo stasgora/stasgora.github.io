@@ -1,0 +1,54 @@
+@import "common/templates"
+@import "common/variables"
+
+$property-mesh-size: calc(15vw + 10rem)
+
+#mesh-properties
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+
+  > div:nth-child(1)
+    margin: 1rem
+    > div:not(.mesh-checkbox)
+        margin-left: 20px
+
+  > div:nth-child(2)
+    width: $property-mesh-size
+    height: $property-mesh-size
+    img
+      position: absolute
+      top: -1rem
+      width: $property-mesh-size
+
+  .mesh-checkbox
+    margin: .4rem
+
+    input
+      height: 16px
+      width: 16px
+      position: absolute
+      display: inline-block
+      cursor: pointer
+      visibility: hidden
+      margin: 2px
+
+    label
+      display: inline-block
+      position: relative
+      padding-left: 28px
+
+      &::before
+        content: ''
+        left: 0
+        display: block
+        position: absolute
+        width: 16px
+        height: 16px
+        stroke: white
+        cursor: pointer
+        border-radius: 2px
+        border: 2px solid darken($main-light-color, 10%)
+
+    input[type=checkbox]:checked + label::before
+      background: $main-light-color url("../assets/svg/checkmark.svg")

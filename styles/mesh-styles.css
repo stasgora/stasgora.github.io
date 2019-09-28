@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
+#mesh-properties {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#mesh-properties > div:nth-child(1) {
+  margin: 1rem;
+}
+#mesh-properties > div:nth-child(1) > div:not(.mesh-checkbox) {
+  margin-left: 20px;
+}
+#mesh-properties > div:nth-child(2) {
+  width: calc(15vw + 10rem);
+  height: calc(15vw + 10rem);
+}
+#mesh-properties > div:nth-child(2) img {
+  position: absolute;
+  top: -1rem;
+  width: calc(15vw + 10rem);
+}
+#mesh-properties .mesh-checkbox {
+  margin: 0.4rem;
+}
+#mesh-properties .mesh-checkbox input {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  visibility: hidden;
+  margin: 2px;
+}
+#mesh-properties .mesh-checkbox label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+}
+#mesh-properties .mesh-checkbox label::before {
+  content: "";
+  left: 0;
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  stroke: white;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 2px solid #1c89fa;
+}
+#mesh-properties .mesh-checkbox input[type=checkbox]:checked + label::before {
+  background: #4ea3fb url("../assets/svg/checkmark.svg");
+}
+
+/*# sourceMappingURL=mesh-styles.css.map */

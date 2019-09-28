@@ -1,9 +1,6 @@
 @import "common/variables"
 @import "common/templates"
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap')
-=serif-font
-  font-family: 'Roboto Slab', serif
 
 $link-bubble-size: calc(.8vw + 1.2rem)
 $nav-height: 3rem
@@ -73,7 +70,7 @@ body
   main
     width: 200%
     display: grid
-    grid-template-columns: auto auto
+    grid-template-columns: 50% 50%
     justify-items: center
     transition: transform 1s ease-in-out
 
@@ -93,10 +90,6 @@ body
         text-align: center
         font-size: 5vw
         font-weight: 700
-
-    > section:nth-of-type(2)
-      > video
-        opacity: .4
 
   nav
     position: fixed
