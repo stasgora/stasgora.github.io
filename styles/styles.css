@@ -85,7 +85,6 @@ body main > section {
 }
 body main > section > video {
   width: 100%;
-  opacity: 0.5;
 }
 body main > section > span:nth-of-type(1) {
   display: block;
@@ -97,6 +96,9 @@ body main > section > span:nth-of-type(1) {
   text-align: center;
   font-size: 5vw;
   font-weight: 700;
+}
+body main > section:nth-of-type(2) > video {
+  opacity: 0.4;
 }
 body nav {
   position: fixed;
@@ -120,10 +122,7 @@ body nav div svg {
   fill: #c1d2e4;
   width: 2rem;
 }
-body nav div:hover {
-  opacity: 1 !important;
-}
-body nav div:nth-child(2) {
+body nav div:nth-child(1) {
   visibility: hidden;
   opacity: 0;
 }

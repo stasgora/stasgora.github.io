@@ -79,10 +79,8 @@ body
 
     > section
       width: 100%
-
       > video
         width: 100%
-        opacity: .5
 
       > span:nth-of-type(1)
         display: block
@@ -96,8 +94,9 @@ body
         font-size: 5vw
         font-weight: 700
 
-    > section:nth-of-type(1)
-      header
+    > section:nth-of-type(2)
+      > video
+        opacity: .4
 
   nav
     position: fixed
@@ -119,9 +118,7 @@ body
       svg
         fill: $text-color
         width: 2rem
-    div:hover
-      opacity: 1 !important
-    div:nth-child(2)
+    div:nth-child(1)
       visibility: hidden
       opacity: 0
 
@@ -129,7 +126,6 @@ body
     transform: translateY($nav-height)
   .nav-pinned
     transform: translateY(0)
-
 
   footer
     width: 100%
