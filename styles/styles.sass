@@ -2,11 +2,13 @@
 @import "common/templates"
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap')
+=serif-font
+  font-family: 'Roboto Slab', serif
 
 $link-bubble-size: calc(.8vw + 1.2rem)
-$header-height: 8vw
+$nav-height: 3rem
 
-div, section, video
+div, body, section, video
   display: block
   position: relative
 *
@@ -16,6 +18,9 @@ div, section, video
 
 html
   font-size: 100%
+  height: 100%
+  overflow-x: hidden
+  width: 100%
 
 +keyframes(scroll-hint)
   0%
@@ -25,16 +30,18 @@ html
 
 body
   margin: 0
+  min-height: 100%
+  padding-bottom: calc(5rem + 1vw)
   background-color: $bg-color
 
   #loading-cover
     position: fixed
     top: 0
     left: 0
-    right: 0
-    bottom: 0
+    width: 100%
+    height: 100%
     background-color: $bg-color
-    z-index: 1
+    z-index: 2
 
     div
       position: absolute
@@ -56,64 +63,78 @@ body
         width: calc(2vw + 1.2rem)
         fill: $text-color
 
-  .header-unpinned
-    transform: translateY(-$header-height)
-  .header-pinned
-    transform: translateY(0)
-
-  header
-    width: 100%
-    height: $header-height
-    position: fixed
-    display: flex
-    align-items: center
-    z-index: 1
-    padding: 0 $page-margin
-    transition: transform 0.5s ease-in-out
-
   #title
-    margin-top: calc(2vw + 1rem)
-    font-family: 'Roboto Slab', serif
+    padding-top: calc(2vw + 1rem)
+    +serif-font
     font-weight: 700
     font-size: calc(1.4vw + 0.7rem)
     padding-left: calc(#{$page-margin} + #{$final-logo-size} * 1.5)
 
   main
-    margin: 0 $page-margin
-    padding: 6vw
+    width: 200%
     display: grid
-    grid-gap: 2rem
     grid-template-columns: auto auto
     justify-items: center
-
-    @media (max-width: 800px)
-      grid-template-columns: auto
+    transition: transform 1s ease-in-out
 
     > section
       width: 100%
-      overflow: hidden
 
       > video
-        border-radius: 1rem
-        max-width: 100%
-        max-height: 30rem
-        margin: 0 auto
+        width: 100%
+        opacity: .5
 
       > span:nth-of-type(1)
         display: block
+        position: absolute
         width: 100%
-        text-align: center
-        font-family: 'Roboto Slab', serif
+        top: 5%
         padding: 1rem
-        font-size: 1.4rem
-      font-weight: 700
+
+        +serif-font
+        text-align: center
+        font-size: 5vw
+        font-weight: 700
 
     > section:nth-of-type(1)
       header
 
+  nav
+    position: fixed
+    display: flex
+    width: 100%
+    height: $nav-height
+    bottom: 0
+    z-index: 1
+    justify-content: space-between
+    padding: 0 1rem 1rem
+    transition: transform 0.5s ease-in-out
+
+    div
+      display: flex
+      align-items: center
+      opacity: .5
+      transition: opacity .2s ease-in-out
+      cursor: pointer
+      svg
+        fill: $text-color
+        width: 2rem
+    div:hover
+      opacity: 1 !important
+    div:nth-child(2)
+      visibility: hidden
+      opacity: 0
+
+  .nav-unpinned
+    transform: translateY($nav-height)
+  .nav-pinned
+    transform: translateY(0)
+
 
   footer
     width: 100%
+    position: absolute
+    bottom: 0
     padding: 1rem $page-margin
     box-sizing: border-box
     text-align: center
@@ -147,10 +168,8 @@ body
         svg
           margin: 0 0 .1rem .1rem
 
-
-
   > #ie-text
-    z-index: 1
+    z-index: 2
     top: 5%
     position: fixed
     text-align: center
