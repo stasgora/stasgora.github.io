@@ -100,54 +100,57 @@
 				</video>
 				<span>Mesh Editor</span>
 				<section id="mesh-properties">
+					<span>Properties</span>
 					<div>
-						<div class="mesh-checkbox">
-							<input id="tri-property" type="checkbox" data-svg-link="mesh-tri" checked>
-							<label for="tri-property">Triangulation</label>
+						<div>
+							<div class="mesh-property">
+								<input id="tri-property" type="checkbox" data-svg-link="mesh-tri" checked>
+								<label for="tri-property">Triangulation</label>
+							</div>
+							<div>
+								<div class="mesh-property">
+									<input id="tri-surfaces-property" type="checkbox" data-svg-link="mesh-tri-s" checked>
+									<label for="tri-surfaces-property">Surfaces</label>
+								</div>
+								<div class="mesh-property">
+									<input id="tri-lines-property" type="checkbox" data-svg-link="mesh-tri-l" checked>
+									<label for="tri-lines-property">Lines</label>
+								</div>
+								<div class="mesh-property">
+									<input id="tri-points-property" type="checkbox" data-svg-link="mesh-tri-p">
+									<label for="tri-points-property">Points</label>
+								</div>
+							</div>
+							<div class="mesh-property">
+								<input id="vor-property" type="checkbox" data-svg-link="mesh-vor" checked>
+								<label for="vor-property">Voronoi diagram</label>
+							</div>
+							<div>
+								<div class="mesh-property">
+									<input id="vor-surfaces-property" type="checkbox" data-svg-link="mesh-vor-s">
+									<label for="vor-surfaces-property">Surfaces</label>
+								</div>
+								<div class="mesh-property">
+									<input id="vor-lines-property" type="checkbox" data-svg-link="mesh-vor-l">
+									<label for="vor-lines-property">Lines</label>
+								</div>
+								<div class="mesh-property">
+									<input id="vor-points-property" type="checkbox" data-svg-link="mesh-vor-p">
+									<label for="vor-points-property">Points</label>
+								</div>
+							</div>
 						</div>
 						<div>
-							<div class="mesh-checkbox">
-								<input id="tri-surfaces-property" type="checkbox" data-svg-link="mesh-tri-s" checked>
-								<label for="tri-surfaces-property">Surfaces</label>
+							<div id="mesh-tri">
+								<img id="mesh-tri-s" src="assets/svg/mesh/tri-s.svg" alt="Mesh triangles">
+								<img id="mesh-tri-l" src="assets/svg/mesh/tri-l.svg" alt="Mesh lines">
+								<img id="mesh-tri-p" src="assets/svg/mesh/tri-p.svg" alt="Mesh points">
 							</div>
-							<div class="mesh-checkbox">
-								<input id="tri-lines-property" type="checkbox" data-svg-link="mesh-tri-l" checked>
-								<label for="tri-lines-property">Lines</label>
+							<div id="mesh-vor">
+								<img id="mesh-vor-s" src="assets/svg/mesh/vor-s.svg" alt="Mesh voronoi regions">
+								<img id="mesh-vor-l" src="assets/svg/mesh/vor-l.svg" alt="Mesh lines">
+								<img id="mesh-vor-p" src="assets/svg/mesh/vor-p.svg" alt="Mesh points">
 							</div>
-							<div class="mesh-checkbox">
-								<input id="tri-points-property" type="checkbox" data-svg-link="mesh-tri-p">
-								<label for="tri-points-property">Points</label>
-							</div>
-						</div>
-						<div class="mesh-checkbox">
-							<input id="vor-property" type="checkbox" data-svg-link="mesh-vor" checked>
-							<label for="vor-property">Voronoi diagram</label>
-						</div>
-						<div>
-							<div class="mesh-checkbox">
-								<input id="vor-surfaces-property" type="checkbox" data-svg-link="mesh-vor-s">
-								<label for="vor-surfaces-property">Surfaces</label>
-							</div>
-							<div class="mesh-checkbox">
-								<input id="vor-lines-property" type="checkbox" data-svg-link="mesh-vor-l">
-								<label for="vor-lines-property">Lines</label>
-							</div>
-							<div class="mesh-checkbox">
-								<input id="vor-points-property" type="checkbox" data-svg-link="mesh-vor-p">
-								<label for="vor-points-property">Points</label>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div id="mesh-tri">
-							<img id="mesh-tri-s" src="assets/svg/mesh/tri-s.svg" alt="Mesh triangles">
-							<img id="mesh-tri-l" src="assets/svg/mesh/tri-l.svg" alt="Mesh lines">
-							<img id="mesh-tri-p" src="assets/svg/mesh/tri-p.svg" alt="Mesh points">
-						</div>
-						<div id="mesh-vor">
-							<img id="mesh-vor-s" src="assets/svg/mesh/vor-s.svg" alt="Mesh voronoi regions">
-							<img id="mesh-vor-l" src="assets/svg/mesh/vor-l.svg" alt="Mesh lines">
-							<img id="mesh-vor-p" src="assets/svg/mesh/vor-p.svg" alt="Mesh points">
 						</div>
 					</div>
 				</section>

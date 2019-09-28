@@ -1,28 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
-#mesh-properties {
+#mesh-properties > div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-#mesh-properties > div:nth-child(1) {
-  margin: 1rem;
-}
-#mesh-properties > div:nth-child(1) > div:not(.mesh-checkbox) {
+#mesh-properties > div > div:nth-child(1) > div:not(.mesh-property) {
   margin-left: 20px;
 }
-#mesh-properties > div:nth-child(2) {
+#mesh-properties > div > div:nth-child(2) {
   width: calc(15vw + 10rem);
   height: calc(15vw + 10rem);
 }
-#mesh-properties > div:nth-child(2) img {
+#mesh-properties > div > div:nth-child(2) img {
   position: absolute;
   top: -1rem;
   width: calc(15vw + 10rem);
 }
-#mesh-properties .mesh-checkbox {
-  margin: 0.4rem;
+#mesh-properties > div .mesh-property {
+  margin: 0.6rem;
 }
-#mesh-properties .mesh-checkbox input {
+#mesh-properties > div .mesh-property input {
   height: 16px;
   width: 16px;
   position: absolute;
@@ -31,12 +28,12 @@
   visibility: hidden;
   margin: 2px;
 }
-#mesh-properties .mesh-checkbox label {
+#mesh-properties > div .mesh-property label {
   display: inline-block;
   position: relative;
   padding-left: 28px;
 }
-#mesh-properties .mesh-checkbox label::before {
+#mesh-properties > div .mesh-property label::before {
   content: "";
   left: 0;
   display: block;
@@ -46,9 +43,9 @@
   stroke: white;
   cursor: pointer;
   border-radius: 2px;
-  border: 2px solid #1c89fa;
+  border: 2px solid #3596fa;
 }
-#mesh-properties .mesh-checkbox input[type=checkbox]:checked + label::before {
+#mesh-properties > div .mesh-property input[type=checkbox]:checked + label::before {
   background: #4ea3fb url("../assets/svg/checkmark.svg");
 }
 

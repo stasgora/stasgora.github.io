@@ -6,8 +6,7 @@ $link-bubble-size: calc(.8vw + 1.2rem)
 $nav-height: 3rem
 
 div, body, section, video
-  display: block
-  position: relative
+  +relative-block
 *
   box-sizing: border-box
   color: $text-color
@@ -24,6 +23,11 @@ html
     opacity: 0
   100%
     opacity: 0.2
+
+=title
+  +serif-font
+  font-weight: 700
+  font-size: calc(1.4vw + 0.7rem)
 
 body
   margin: 0
@@ -61,10 +65,8 @@ body
         fill: $text-color
 
   #title
+    +title
     padding-top: calc(2vw + 1rem)
-    +serif-font
-    font-weight: 700
-    font-size: calc(1.4vw + 0.7rem)
     padding-left: calc(#{$page-margin} + #{$final-logo-size} * 1.5)
 
   main
@@ -90,6 +92,12 @@ body
         text-align: center
         font-size: 5vw
         font-weight: 700
+
+      section > span:nth-of-type(1)
+        +title
+        +relative-block
+        padding: 1rem
+        margin-left: 3rem
 
   nav
     position: fixed
