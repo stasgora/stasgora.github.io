@@ -35,6 +35,20 @@ body
   padding-bottom: calc(5rem + 1vw)
   background-color: $bg-color
 
+  h1, h3, h5
+    margin: 0
+    padding: calc(.6vw + .4rem)
+  h1, h3
+    +serif-font
+    font-weight: 700
+  h1
+    text-align: center
+    font-size: 5vw
+  h3
+    font-size: calc(1.4vw + 0.7rem)
+  h5
+    font-size: calc(1vw + .5rem)
+
   #loading-cover
     position: fixed
     top: 0
@@ -82,25 +96,17 @@ body
         width: 100%
         margin-bottom: calc(.5vh + .5vw + .5rem)
 
-      > span:nth-of-type(1)
+      > h1
         display: block
         position: absolute
         width: 100%
         top: 5rem
-        padding: 1rem
-
-        +serif-font
-        text-align: center
-        font-size: 5vw
-        font-weight: 700
 
       section:not(:first-child)
         margin-left: calc(7vw + 1.5rem)
         overflow: hidden
-        > span:nth-of-type(1)
-          +title
+        > h3
           +relative-block
-          padding: calc(.6vw + .4rem)
 
   nav
     position: fixed

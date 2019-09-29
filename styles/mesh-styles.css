@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
-section:not(:first-child) > span:nth-of-type(2) {
+section:not(:first-child) > span {
   font-size: calc(.7vw + .7rem);
   margin-left: 2rem;
 }
@@ -27,8 +27,9 @@ section:not(:first-child) > span:nth-of-type(2) {
   max-width: 50%;
 }
 
-#mesh-editor-description > span:nth-of-type(1) {
+#mesh-editor-description > h5 {
   font-size: calc(1vw + .5rem);
+  margin-right: 1rem;
 }
 #mesh-editor-description > div > div:nth-child(2) {
   padding: calc(1vw + .5rem);
