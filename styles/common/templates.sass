@@ -1,3 +1,5 @@
+@import "variables"
+
 =transform($property)
   -webkit-transform: $property
   transform: $property
@@ -15,3 +17,40 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap')
 =serif-font
   font-family: 'Roboto Slab', serif
+
+@mixin text-selection($text-color, $bg-color)
+  ::selection
+    color: $text-color
+    background: $bg-color
+
+  ::-moz-selection
+    color: $text-color
+    background: $bg-color
+
+@mixin scrollbars($size, $color)
+  // For Google Chrome
+  ::-webkit-scrollbar
+    width: $size
+    height: $size
+
+  ::-webkit-scrollbar-thumb
+    height: $size / 2
+    border: $size / 4 solid $bg-color
+    background-clip: padding-box
+    border-radius: $size
+    background: $color
+
+  ::-webkit-scrollbar-button
+    width: 0
+    height: 0
+    display: none
+
+  // Firefox
+  html
+    scrollbar-color: $color transparent
+    scrollbar-width: thin
+
+  // Internet Explorer
+  body
+    scrollbar-face-color: $color
+    scrollbar-track-color: transparent

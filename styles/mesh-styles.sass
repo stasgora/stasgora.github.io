@@ -2,14 +2,47 @@
 @import "common/variables"
 
 $property-mesh-size: calc(15vw + 10rem)
+$github-link-size: calc(1vw + .8rem)
+$checkbox-size: calc(.2vw + .8rem)
 
-#mesh-properties
+section:not(:first-child)
+  > span:nth-of-type(2)
+    font-size: calc(.7vw + .7rem)
+    margin-left: 2rem
 
+.github-link
+  text-decoration: none
+  display: flex
+  align-items: center
+  box-sizing: content-box
+  padding: .5rem
+  font-size: calc(1vw + .5rem)
+  svg
+    margin-right: .5rem
+    width: $github-link-size
+    fill: $text-color
+
+.split-section
   > div
     display: flex
     justify-content: space-evenly
     align-items: center
+    > div
+      max-width: 50%
 
+
+#mesh-editor-description
+  > span:nth-of-type(1)
+    font-size: calc(1vw + .5rem)
+  > div
+    > div:nth-child(2)
+      padding: calc(1vw + .5rem)
+      img
+        +relative-block
+        width: 100%
+
+#mesh-properties
+  > div
     > div:nth-child(1)
       > div:not(.mesh-property)
           margin-left: 20px
@@ -23,11 +56,12 @@ $property-mesh-size: calc(15vw + 10rem)
         width: $property-mesh-size
 
     .mesh-property
-      margin: .6rem
+      margin: calc(.8vw + .2rem)
+      font-size: $checkbox-size
 
       input
-        height: 16px
-        width: 16px
+        height: $checkbox-size
+        width: $checkbox-size
         position: absolute
         display: inline-block
         cursor: pointer
@@ -43,8 +77,8 @@ $property-mesh-size: calc(15vw + 10rem)
           left: 0
           display: block
           position: absolute
-          width: 16px
-          height: 16px
+          width: $checkbox-size
+          height: $checkbox-size
           stroke: white
           cursor: pointer
           border-radius: 2px

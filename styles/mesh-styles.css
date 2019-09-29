@@ -1,9 +1,44 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
-#mesh-properties > div {
+section:not(:first-child) > span:nth-of-type(2) {
+  font-size: calc(.7vw + .7rem);
+  margin-left: 2rem;
+}
+
+.github-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  box-sizing: content-box;
+  padding: 0.5rem;
+  font-size: calc(1vw + .5rem);
+}
+.github-link svg {
+  margin-right: 0.5rem;
+  width: calc(1vw + .8rem);
+  fill: #c1d2e4;
+}
+
+.split-section > div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+.split-section > div > div {
+  max-width: 50%;
+}
+
+#mesh-editor-description > span:nth-of-type(1) {
+  font-size: calc(1vw + .5rem);
+}
+#mesh-editor-description > div > div:nth-child(2) {
+  padding: calc(1vw + .5rem);
+}
+#mesh-editor-description > div > div:nth-child(2) img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
 #mesh-properties > div > div:nth-child(1) > div:not(.mesh-property) {
   margin-left: 20px;
 }
@@ -17,11 +52,12 @@
   width: calc(15vw + 10rem);
 }
 #mesh-properties > div .mesh-property {
-  margin: 0.6rem;
+  margin: calc(.8vw + .2rem);
+  font-size: calc(.2vw + .8rem);
 }
 #mesh-properties > div .mesh-property input {
-  height: 16px;
-  width: 16px;
+  height: calc(.2vw + .8rem);
+  width: calc(.2vw + .8rem);
   position: absolute;
   display: inline-block;
   cursor: pointer;
@@ -38,8 +74,8 @@
   left: 0;
   display: block;
   position: absolute;
-  width: 16px;
-  height: 16px;
+  width: calc(.2vw + .8rem);
+  height: calc(.2vw + .8rem);
   stroke: white;
   cursor: pointer;
   border-radius: 2px;
