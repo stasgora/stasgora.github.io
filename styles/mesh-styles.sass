@@ -2,45 +2,82 @@
 @import "common/variables"
 
 $property-mesh-size: calc(15vw + 10rem)
-$github-link-size: calc(1vw + .8rem)
+$github-link-color: mix($text-color, $main-color, 25%)
+$badge-size: calc(1vw + .6rem)
 $checkbox-size: calc(.2vw + .8rem)
+$layout-breakpoint: 700px
 
 section:not(:first-child)
   > span
-    font-size: calc(.7vw + .7rem)
+    display: block
+    font-size: 1rem
     margin-left: 2rem
+    margin-right: .5rem
 
-.github-link
-  text-decoration: none
-  display: flex
+.section-link-badge
+  display: inline-flex
+  margin-left: 1rem
+  padding: .1rem
   align-items: center
   box-sizing: content-box
-  padding: .5rem
   font-size: calc(1vw + .5rem)
+  text-decoration: none
+  background-color: $text-color
+  border-radius: $badge-size
+  +mat-shadow
+  span
+    +relative-block
+    padding: 0 .5rem
+    color: $main-dark-color
+    +serif-font
   svg
-    margin-right: .5rem
-    width: $github-link-size
+    fill: $main-dark-color
+    border-radius: 50%
+    width: $badge-size
+    margin-left: 3px
+  svg.circle-badge
+    background: $main-dark-color
+    padding: .2rem
     fill: $text-color
+  &:hover
+    background-color: $main-dark-color
+    span
+      color: $text-color
+    svg
+      fill: $text-color
+    svg.circle-badge
+      background: $text-color
+      fill: $main-dark-color
 
 .split-section
   > div
     display: flex
     justify-content: space-evenly
     align-items: center
+    padding: 1vh 0
     > div
       max-width: 50%
+    > div:nth-child(2)
+      padding: 0 calc(2vw + 1rem)
+      box-sizing: content-box
 
+    @media (max-width: $layout-breakpoint)
+      flex-direction: column
+      > div
+        max-width: 100%
+      > div:nth-child(2)
+        padding: calc(2vw + 1rem) calc(2vw + 1rem)
 
 #mesh-editor-description
   > h5
-    font-size: calc(1vw + .5rem)
     margin-right: 1rem
   > div
-    > div:nth-child(2)
-      padding: calc(1vw + .5rem)
       img
         +relative-block
         width: 100%
+        @media (min-width: $layout-breakpoint)
+          margin-top: 2rem
+
 
 #mesh-properties
   > div
@@ -53,7 +90,6 @@ section:not(:first-child)
       height: $property-mesh-size
       img
         position: absolute
-        top: -1rem
         width: $property-mesh-size
 
     .mesh-property

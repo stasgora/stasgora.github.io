@@ -1,43 +1,95 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
 section:not(:first-child) > span {
-  font-size: calc(.7vw + .7rem);
+  display: block;
+  font-size: 1rem;
   margin-left: 2rem;
+  margin-right: 0.5rem;
 }
 
-.github-link {
-  text-decoration: none;
-  display: flex;
+.section-link-badge {
+  display: inline-flex;
+  margin-left: 1rem;
+  padding: 0.1rem;
   align-items: center;
   box-sizing: content-box;
-  padding: 0.5rem;
   font-size: calc(1vw + .5rem);
+  text-decoration: none;
+  background-color: #c1d2e4;
+  border-radius: calc(1vw + .6rem);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-.github-link svg {
-  margin-right: 0.5rem;
-  width: calc(1vw + .8rem);
+.section-link-badge:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.section-link-badge span {
+  position: relative;
+  display: block;
+  padding: 0 0.5rem;
+  color: #153d63;
+  font-family: "Roboto Slab", serif;
+}
+.section-link-badge svg {
+  fill: #153d63;
+  border-radius: 50%;
+  width: calc(1vw + .6rem);
+  margin-left: 3px;
+}
+.section-link-badge svg.circle-badge {
+  background: #153d63;
+  padding: 0.2rem;
   fill: #c1d2e4;
+}
+.section-link-badge:hover {
+  background-color: #153d63;
+}
+.section-link-badge:hover span {
+  color: #c1d2e4;
+}
+.section-link-badge:hover svg {
+  fill: #c1d2e4;
+}
+.section-link-badge:hover svg.circle-badge {
+  background: #c1d2e4;
+  fill: #153d63;
 }
 
 .split-section > div {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 1vh 0;
 }
 .split-section > div > div {
   max-width: 50%;
 }
+.split-section > div > div:nth-child(2) {
+  padding: 0 calc(2vw + 1rem);
+  box-sizing: content-box;
+}
+@media (max-width: 700px) {
+  .split-section > div {
+    flex-direction: column;
+  }
+  .split-section > div > div {
+    max-width: 100%;
+  }
+  .split-section > div > div:nth-child(2) {
+    padding: calc(2vw + 1rem) calc(2vw + 1rem);
+  }
+}
 
 #mesh-editor-description > h5 {
-  font-size: calc(1vw + .5rem);
   margin-right: 1rem;
 }
-#mesh-editor-description > div > div:nth-child(2) {
-  padding: calc(1vw + .5rem);
-}
-#mesh-editor-description > div > div:nth-child(2) img {
+#mesh-editor-description > div img {
   position: relative;
   display: block;
   width: 100%;
+}
+@media (min-width: 700px) {
+  #mesh-editor-description > div img {
+    margin-top: 2rem;
+  }
 }
 
 #mesh-properties > div > div:nth-child(1) > div:not(.mesh-property) {
@@ -49,7 +101,6 @@ section:not(:first-child) > span {
 }
 #mesh-properties > div > div:nth-child(2) img {
   position: absolute;
-  top: -1rem;
   width: calc(15vw + 10rem);
 }
 #mesh-properties > div .mesh-property {

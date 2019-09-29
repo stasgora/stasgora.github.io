@@ -9,6 +9,12 @@ const unpinned = 'nav-unpinned';
 $(() => {
 	nav = $('nav');
 	main = $('main');
+
+	// Block horizontal scrolling
+	$(window).bind('scroll', () => {
+		if ($(window).scrollLeft() !== 0)
+			$(window).scrollLeft(0);
+	});
 	navButtons = [$('nav > div:first-child'), $('nav > div:last-child')];
 
 	setTimeout(() => {
