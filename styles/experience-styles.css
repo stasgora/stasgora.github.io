@@ -1,5 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap");
+main > section:nth-child(2) {
+  background-color: #222d32;
+}
+main > section:nth-child(2) h3, main > section:nth-child(2) h5 {
+  color: #6546a6;
+}
+main > section:nth-child(2) > div:first-of-type {
+  background: linear-gradient(transparent, #222d32);
+}
 main > section:nth-child(2) > video {
   opacity: 0.4;
+}
+main > section:nth-child(2) > section {
+  margin-right: 2rem;
+  display: grid;
+  justify-items: center;
+}
+main > section:nth-child(2) > section:nth-of-type(1) {
+  grid-template: "title lang tools" auto ". other frameworks" auto/auto 1fr 1fr;
+}
+@media (max-width: 900px) {
+  main > section:nth-child(2) > section:nth-of-type(1) {
+    grid-template: "title title" auto "lang tools" auto "other frameworks" auto/1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  main > section:nth-child(2) > section:nth-of-type(1) {
+    grid-template: "title title" auto "lang other" auto "lang frameworks" auto "tools tools" auto/1fr 1fr;
+  }
+}
+main > section:nth-child(2) > section:nth-of-type(1) > h3 {
+  text-align: center;
+}
+main > section:nth-child(2) > section:nth-of-type(1) > div > span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555fbc;
+  font-family: "Martel", serif;
+}
+main > section:nth-child(2) > section:nth-of-type(1) > div > span:after {
+  content: ": ";
+}
+main > section:nth-child(2) > section:nth-of-type(1) > div > ul {
+  margin-top: 0.5rem;
+}
+main > section:nth-child(2) > section:nth-of-type(1) > div > ul > li {
+  font-weight: 700;
+}
+main > section:nth-child(2) > section:nth-of-type(1) > div > ul > li > span {
+  color: #91a1af;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+main > section:nth-child(2) > section:nth-of-type(1) > div > ul > li > span:after {
+  content: ": ";
+}
+main > section:nth-child(2) > section:nth-of-type(2) {
+  grid-template: "title . ." auto ". content content" auto/auto 1fr 1fr;
+}
+@media (max-width: 900px) {
+  main > section:nth-child(2) > section:nth-of-type(2) {
+    grid-template: "title title" auto "content content" auto/1fr 1fr;
+  }
+}
+@media (min-width: 900px) {
+  main > section:nth-child(2) > section:nth-of-type(2) > div {
+    margin: 0 2rem;
+  }
+}
+main > section:nth-child(2) > section:nth-of-type(2) > div > div > span {
+  display: block;
+  font-weight: 600;
+}
+main > section:nth-child(2) > section:nth-of-type(2) > div > div > span:nth-child(1) {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+main > section:nth-child(2) > section:nth-of-type(2) > div > div > span:nth-child(2) {
+  margin: 0.3rem 0;
+  color: #555fbc;
+}
+main > section:nth-child(2) > section:nth-of-type(2) > div > div > span:nth-child(2) > span {
+  color: #91a1af;
+  margin-left: 0.3rem;
+  font-size: 0.9rem;
+}
+main > section:nth-child(2) > section:nth-of-type(2) > div > div p, main > section:nth-child(2) > section:nth-of-type(2) > div > div ul {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+main > section:nth-child(2) > section:nth-of-type(2) > div > div p {
+  text-indent: 1rem;
+}
+main > section:nth-child(2) > section:nth-of-type(3) {
+  grid-template: "title . ." auto ". content content" auto/auto 1fr 1fr;
+  display: none;
+}
+@media (max-width: 900px) {
+  main > section:nth-child(2) > section:nth-of-type(3) {
+    grid-template: "title title" auto "content content" auto/1fr 1fr;
+  }
 }
 
 /*# sourceMappingURL=experience-styles.css.map */

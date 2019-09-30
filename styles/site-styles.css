@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap");
 div, body, section, video, img {
   position: relative;
   display: block;
@@ -44,7 +44,7 @@ body h1, body h3, body h5 {
   padding: calc(.6vw + .4rem);
 }
 body h1, body h3 {
-  font-family: "Roboto Slab", serif;
+  font-family: "Martel", serif;
   font-weight: 700;
 }
 body h1 {
@@ -52,10 +52,10 @@ body h1 {
   font-size: 5vw;
 }
 body h3 {
-  font-size: calc(1.4vw + 0.7rem);
+  font-size: calc(1.1vw + 1rem);
 }
 body h5 {
-  font-size: calc(1vw + .6rem);
+  font-size: calc(1.1vw + .7rem);
 }
 body #loading-cover {
   position: fixed;
@@ -85,7 +85,7 @@ body #loading-cover div svg {
   fill: #c1d2e4;
 }
 body #title {
-  font-family: "Roboto Slab", serif;
+  font-family: "Martel", serif;
   font-weight: 700;
   font-size: calc(1.4vw + 0.7rem);
   padding-top: calc(2vw + 1rem);
@@ -96,15 +96,17 @@ body main {
   display: grid;
   grid-template-columns: 50% 50%;
   justify-items: center;
-  margin-bottom: 2rem;
   transition: transform 1s ease-in-out;
 }
 body main > section {
   width: 100%;
 }
+body main > section > div:first-of-type {
+  height: 3rem;
+  bottom: calc(3rem - 1px);
+}
 body main > section > video {
   width: 100%;
-  margin-bottom: calc(.5vh + .5vw + .5rem);
 }
 body main > section > h1 {
   display: block;
@@ -139,10 +141,18 @@ body nav div {
   cursor: pointer;
   background-color: #222d32;
   border-radius: 0.4rem;
+  border: 2px solid rgba(193, 210, 228, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body nav div:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 body nav div svg {
   fill: #c1d2e4;
   width: 2rem;
+}
+body nav div span {
+  font-weight: 700;
 }
 body nav div:nth-child(1) {
   padding-right: 0.8rem;
@@ -232,7 +242,7 @@ body > #ie-text {
   display: none;
 }
 
-::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
   background: transparent;
 }
 

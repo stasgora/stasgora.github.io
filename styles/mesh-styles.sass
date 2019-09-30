@@ -7,6 +7,20 @@ $badge-size: calc(1vw + .6rem)
 $checkbox-size: calc(.2vw + .8rem)
 $layout-breakpoint: 700px
 
+$accent-color: nth($accent-colors, 1)
+$bg-color: nth($bg-colors, 1)
+
+main > section:nth-child(1)
+  background-color: $bg-color
+  h3, h5
+    color: $accent-color
+  > div:first-of-type
+    background: linear-gradient(transparent, $bg-color)
+  > div:last-child
+    margin-top: 2rem
+    height: $bg-transition-size
+    background: linear-gradient($bg-color, $main-bg-color)
+
 section:not(:first-child)
   > span
     display: block
@@ -22,32 +36,33 @@ section:not(:first-child)
   box-sizing: content-box
   font-size: calc(1vw + .5rem)
   text-decoration: none
-  background-color: $text-color
+  background-color: $accent-color
   border-radius: $badge-size
   +mat-shadow
   span
     +relative-block
     padding: 0 .5rem
-    color: $main-dark-color
+    color: $bg-color
     +serif-font
+    line-height: 140%
   svg
-    fill: $main-dark-color
+    fill: $bg-color
     border-radius: 50%
     width: $badge-size
     margin-left: 3px
   svg.circle-badge
-    background: $main-dark-color
+    background: $bg-color
     padding: .2rem
-    fill: $text-color
+    fill: $accent-color
   &:hover
-    background-color: $main-dark-color
+    background-color: $accent-color
     span
       color: $text-color
     svg
       fill: $text-color
     svg.circle-badge
       background: $text-color
-      fill: $main-dark-color
+      fill: $accent-color
 
 .split-section
   > div

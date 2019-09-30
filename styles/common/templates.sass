@@ -1,5 +1,9 @@
 @import "variables"
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap')
+=serif-font
+  font-family: 'Martel', serif
+
 =transform($property)
   -webkit-transform: $property
   transform: $property
@@ -19,10 +23,6 @@
   &:hover
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap')
-=serif-font
-  font-family: 'Roboto Slab', serif
-
 @mixin text-selection($text-color, $bg-color)
   ::selection
     color: $text-color
@@ -40,7 +40,7 @@
 
   ::-webkit-scrollbar-thumb
     height: $size / 2
-    border: $size / 4 solid $bg-color
+    border: $size / 4 solid $main-bg-color
     background-clip: padding-box
     border-radius: $size
     background: $color
@@ -50,7 +50,7 @@
     height: 0
     display: none
 
-  ::-webkit-scrollbar-corner
+  ::-webkit-scrollbar-corner, ::-webkit-scrollbar-track
     background: transparent
 
   // Firefox

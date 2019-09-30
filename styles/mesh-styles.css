@@ -1,4 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap");
+main > section:nth-child(1) {
+  background-color: #243f4c;
+}
+main > section:nth-child(1) h3, main > section:nth-child(1) h5 {
+  color: #429252;
+}
+main > section:nth-child(1) > div:first-of-type {
+  background: linear-gradient(transparent, #243f4c);
+}
+main > section:nth-child(1) > div:last-child {
+  margin-top: 2rem;
+  height: 3rem;
+  background: linear-gradient(#243f4c, #222d32);
+}
+
 section:not(:first-child) > span {
   display: block;
   font-size: 1rem;
@@ -14,7 +29,7 @@ section:not(:first-child) > span {
   box-sizing: content-box;
   font-size: calc(1vw + .5rem);
   text-decoration: none;
-  background-color: #c1d2e4;
+  background-color: #429252;
   border-radius: calc(1vw + .6rem);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -25,22 +40,23 @@ section:not(:first-child) > span {
   position: relative;
   display: block;
   padding: 0 0.5rem;
-  color: #153d63;
-  font-family: "Roboto Slab", serif;
+  color: #243f4c;
+  font-family: "Martel", serif;
+  line-height: 140%;
 }
 .section-link-badge svg {
-  fill: #153d63;
+  fill: #243f4c;
   border-radius: 50%;
   width: calc(1vw + .6rem);
   margin-left: 3px;
 }
 .section-link-badge svg.circle-badge {
-  background: #153d63;
+  background: #243f4c;
   padding: 0.2rem;
-  fill: #c1d2e4;
+  fill: #429252;
 }
 .section-link-badge:hover {
-  background-color: #153d63;
+  background-color: #429252;
 }
 .section-link-badge:hover span {
   color: #c1d2e4;
@@ -50,7 +66,7 @@ section:not(:first-child) > span {
 }
 .section-link-badge:hover svg.circle-badge {
   background: #c1d2e4;
-  fill: #153d63;
+  fill: #429252;
 }
 
 .split-section > div {

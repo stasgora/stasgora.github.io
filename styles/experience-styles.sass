@@ -1,5 +1,86 @@
+@import "common/variables"
+@import "common/templates"
+
+$accent-color: nth($accent-colors, 2)
+$sec-acc-color: lighten(mix($accent-color, $main-color, 60%), 10%)
+$greyed-color: mix($text-color, $main-bg-color, 70%)
+$bg-color: nth($bg-colors, 2)
+
+$layout-breakpoint: 900px
+=one-section-grid
+  grid-template: "title . ." auto ". content content" auto / auto 1fr 1fr
+  @media (max-width: $layout-breakpoint)
+    grid-template: "title title" auto "content content" auto / 1fr 1fr
 
 main
   > section:nth-child(2)
+    background-color: $bg-color
+    h3, h5
+      color: $accent-color
+    > div:first-of-type
+      background: linear-gradient(transparent, $main-bg-color)
     > video
       opacity: .4
+
+    > section
+      margin-right: 2rem
+      display: grid
+      justify-items: center
+
+    > section:nth-of-type(1)
+      grid-template: "title lang tools" auto ". other frameworks" auto / auto 1fr 1fr
+      @media (max-width: $layout-breakpoint)
+        grid-template: "title title" auto "lang tools" auto "other frameworks" auto / 1fr 1fr
+      @media (max-width: 600px)
+        grid-template: "title title" auto "lang other" auto "lang frameworks" auto "tools tools" auto / 1fr 1fr
+
+      > h3
+        text-align: center
+      > div
+        > span
+          font-size: 1.1rem
+          font-weight: 600
+          color: $sec-acc-color
+          +serif-font
+          &:after
+            content: ": "
+        > ul
+          margin-top: .5rem
+          > li
+            font-weight: 700
+            > span
+              color: $greyed-color
+              font-weight: normal
+              font-size: .9rem
+              &:after
+                content: ": "
+
+    > section:nth-of-type(2)
+      +one-section-grid
+      > div
+        @media (min-width: $layout-breakpoint)
+          margin: 0 2rem
+        > div
+          > span
+            display: block
+            font-weight: 600
+          > span:nth-child(1)
+            font-size: .7rem
+            text-transform: uppercase
+          > span:nth-child(2)
+            margin: .3rem 0
+            color: $sec-acc-color
+            > span
+              color: $greyed-color
+              margin-left: .3rem
+              font-size: .9rem
+          p, ul
+            margin-left: 1rem
+            font-size: .9rem
+            line-height: 1.5rem
+          p
+            text-indent: 1rem
+
+    > section:nth-of-type(3)
+      +one-section-grid
+      display: none
