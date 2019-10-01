@@ -40,7 +40,7 @@ function bindScrollEvents() {
 			onNavButtonPress(1);
 	});
 	//swipes
-	let hammer = new Hammer($('body').get(0));
+	let hammer = new Hammer($('body').get(0), {touchAction: 'auto'});
 	hammer.on('swipeleft', () => onNavButtonPress(1));
 	hammer.on('swiperight', () => onNavButtonPress(0));
 	hammer.get('swipe').set({threshold: 100});
