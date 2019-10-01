@@ -44,6 +44,7 @@ function bindScrollEvents() {
 	hammer.on('swipeleft', () => onNavButtonPress(1));
 	hammer.on('swiperight', () => onNavButtonPress(0));
 	hammer.get('swipe').set({threshold: 100});
+	hammer.off('pinch');
 }
 
 function onNavButtonPress(index) {
