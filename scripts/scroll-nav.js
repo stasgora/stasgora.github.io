@@ -25,16 +25,26 @@ $(() => {
 			updateRequested = true;
 		});
 	}, 1000);
+	bindScrollEvents();
+});
+
+function bindScrollEvents() {
+	//buttons
 	navButtons[0].click(() => onNavButtonPress(0));
 	navButtons[1].click(() => onNavButtonPress(1));
-
+	//arrow keys
 	$(document).keydown(event => {
 		if(event.which === 37)
 			onNavButtonPress(0);
 		else if(event.which === 39)
 			onNavButtonPress(1);
 	});
-});
+	//swipes
+	let hammer = new Hammer($('body').get(0));
+	hammer.on('swipeleft', () => onNavButtonPress(1));
+	hammer.on('swiperight', () => onNavButtonPress(0));
+	hammer.get('swipe').set({threshold: 100});
+}
 
 function onNavButtonPress(index) {
 	main.css('transform', index === 0 ? 'none' : 'translateX(-50%)');
