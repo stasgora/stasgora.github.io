@@ -38,6 +38,7 @@ body
   h1, h3, h5
     margin: 0
     padding: calc(.6vw + .4rem)
+    line-height: 160%
   h1, h3
     +serif-font
     font-weight: 700
@@ -102,10 +103,11 @@ body
         display: block
         position: absolute
         width: 100%
-        top: 5rem
+        top: calc(10vw + 2rem)
 
       section:not(:first-child)
         margin-left: calc(7vw + 1.5rem)
+        margin-right: 2rem
         overflow: hidden
         > h3
           +relative-block
@@ -170,7 +172,7 @@ body
         padding: calc(.2vw + .2rem)
         margin: 0 .6rem
         border-radius: 50%
-        background-color: $text-color
+        background-color: darken($text-color, 20%)
         +mat-shadow
         svg
           display: block

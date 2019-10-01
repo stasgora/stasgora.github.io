@@ -12,7 +12,6 @@ main > section:nth-child(2) > video {
   opacity: 0.4;
 }
 main > section:nth-child(2) > section {
-  margin-right: 2rem;
   display: grid;
   justify-items: center;
 }
@@ -33,7 +32,7 @@ main > section:nth-child(2) > section:nth-of-type(1) > h3 {
   text-align: center;
 }
 main > section:nth-child(2) > section:nth-of-type(1) > div > span {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #555fbc;
   font-family: "Martel", serif;
@@ -73,21 +72,21 @@ main > section:nth-child(2) > section:nth-of-type(2) > div > div > span {
   font-weight: 600;
 }
 main > section:nth-child(2) > section:nth-of-type(2) > div > div > span:nth-child(1) {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 main > section:nth-child(2) > section:nth-of-type(2) > div > div > span:nth-child(2) {
-  margin: 0.3rem 0;
   color: #555fbc;
+  font-size: 1.4rem;
 }
 main > section:nth-child(2) > section:nth-of-type(2) > div > div > span:nth-child(2) > span {
   color: #91a1af;
   margin-left: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 main > section:nth-child(2) > section:nth-of-type(2) > div > div p, main > section:nth-child(2) > section:nth-of-type(2) > div > div ul {
-  margin-left: 1rem;
-  font-size: 0.9rem;
+  margin: 0.5rem 0 1.6rem 1rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 main > section:nth-child(2) > section:nth-of-type(2) > div > div p {

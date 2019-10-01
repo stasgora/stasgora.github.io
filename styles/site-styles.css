@@ -42,6 +42,7 @@ body {
 body h1, body h3, body h5 {
   margin: 0;
   padding: calc(.6vw + .4rem);
+  line-height: 160%;
 }
 body h1, body h3 {
   font-family: "Martel", serif;
@@ -112,10 +113,11 @@ body main > section > h1 {
   display: block;
   position: absolute;
   width: 100%;
-  top: 5rem;
+  top: calc(10vw + 2rem);
 }
 body main > section section:not(:first-child) {
   margin-left: calc(7vw + 1.5rem);
+  margin-right: 2rem;
   overflow: hidden;
 }
 body main > section section:not(:first-child) > h3 {
@@ -191,7 +193,7 @@ body footer section a {
   padding: calc(.2vw + .2rem);
   margin: 0 0.6rem;
   border-radius: 50%;
-  background-color: #c1d2e4;
+  background-color: #7a9ec5;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 body footer section a:hover {

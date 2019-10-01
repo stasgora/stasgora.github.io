@@ -16,21 +16,22 @@ main > section:nth-child(1) > div:last-child {
 
 section:not(:first-child) > span {
   display: block;
-  font-size: 1rem;
   margin-left: 2rem;
-  margin-right: 0.5rem;
+}
+section:not(:first-child) span, section:not(:first-child) ul {
+  font-size: 1.1rem;
 }
 
 .section-link-badge {
   display: inline-flex;
-  margin-left: 1rem;
+  margin: 0.2rem 0 0.2rem 1rem;
   padding: 0.1rem;
   align-items: center;
   box-sizing: content-box;
-  font-size: calc(1vw + .5rem);
+  font-size: calc(0.6vw + .6rem);
   text-decoration: none;
   background-color: #429252;
-  border-radius: calc(1vw + .6rem);
+  border-radius: calc(.8vw + .6rem);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 .section-link-badge:hover {
@@ -47,7 +48,7 @@ section:not(:first-child) > span {
 .section-link-badge svg {
   fill: #243f4c;
   border-radius: 50%;
-  width: calc(1vw + .6rem);
+  width: calc(.8vw + .6rem);
   margin-left: 3px;
 }
 .section-link-badge svg.circle-badge {
@@ -56,17 +57,17 @@ section:not(:first-child) > span {
   fill: #429252;
 }
 .section-link-badge:hover {
-  background-color: #429252;
+  background-color: #1c313b;
 }
 .section-link-badge:hover span {
-  color: #c1d2e4;
+  color: #429252;
 }
 .section-link-badge:hover svg {
-  fill: #c1d2e4;
+  fill: #429252;
 }
 .section-link-badge:hover svg.circle-badge {
-  background: #c1d2e4;
-  fill: #429252;
+  background: #429252;
+  fill: #1c313b;
 }
 
 .split-section > div {
@@ -94,9 +95,6 @@ section:not(:first-child) > span {
   }
 }
 
-#mesh-editor-description > h5 {
-  margin-right: 1rem;
-}
 #mesh-editor-description > div img {
   position: relative;
   display: block;
