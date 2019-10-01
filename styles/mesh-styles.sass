@@ -108,15 +108,20 @@ section:not(:first-child)
     .mesh-property
       margin: calc(.8vw + .2rem)
       font-size: $checkbox-size
-
       input
+        display: inline-block
+
+      input[type=checkbox]
         height: $checkbox-size
         width: $checkbox-size
         position: absolute
-        display: inline-block
         cursor: pointer
         visibility: hidden
         margin: 2px
+
+      input[type=range]
+        width: 6rem
+        margin-left: 1rem
 
       label
         display: inline-block

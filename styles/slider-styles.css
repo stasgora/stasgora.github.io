@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap");
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: #074C94;
+  cursor: pointer;
+  border: none;
+  margin-top: -5px;
+}
+input[type=range]::-webkit-slider-thumb:active {
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 12px;
+  width: 12px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: #074C94;
+  cursor: pointer;
+  border: none;
+}
+input[type=range]::-moz-range-thumb:active {
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+}
+
+input[type=range]::-ms-thumb {
+  height: 12px;
+  width: 12px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: #074C94;
+  cursor: pointer;
+  border: none;
+}
+input[type=range]::-ms-thumb:active {
+  height: 16px;
+  width: 16px;
+  margin-top: -8px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  border-radius: 1.3px;
+  background: rgba(0, 0, 0, 0.26);
+  margin: 6px 0;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  border-radius: 1.3px;
+  background: rgba(0, 0, 0, 0.26);
+  margin: 6px 0;
+}
+
+input[type=range]::-moz-focus-outer {
+  border: 0;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  border-radius: 1.3px;
+  background: rgba(0, 0, 0, 0.26);
+  margin: 6px 0;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #074C94;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: rgba(0, 0, 0, 0.26);
+}
+
+/*# sourceMappingURL=slider-styles.css.map */

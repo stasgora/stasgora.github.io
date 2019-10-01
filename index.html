@@ -72,6 +72,7 @@
 		<link href="styles/mesh-styles.css" rel="stylesheet" type="text/css">
 		<link href="styles/loading-logo.css" rel="stylesheet" type="text/css">
 		<link href="styles/experience-styles.css" rel="stylesheet" type="text/css">
+		<link href="styles/slider-styles.css" rel="stylesheet" type="text/css">
 
 		<script src="scripts/loading-logo.js" type="application/javascript"></script>
 		<script src="scripts/scroll-nav.js" type="application/javascript"></script>
@@ -136,6 +137,7 @@
 							<div class="mesh-property">
 								<input id="tri-property" type="checkbox" data-svg-link="mesh-tri" checked>
 								<label for="tri-property">Triangulation</label>
+								<input type="range" min="0" max="1" step="0.01" value=".5" data-svg-link="mesh-tri" title="Opacity">
 							</div>
 							<div>
 								<div class="mesh-property">
@@ -154,6 +156,7 @@
 							<div class="mesh-property">
 								<input id="vor-property" type="checkbox" data-svg-link="mesh-vor" checked>
 								<label for="vor-property">Voronoi diagram</label>
+								<input type="range" min="0" max="1" step="0.01" value="1" data-svg-link="mesh-vor" title="Opacity">
 							</div>
 							<div>
 								<div class="mesh-property">

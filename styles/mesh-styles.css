@@ -122,13 +122,19 @@ section:not(:first-child) span, section:not(:first-child) ul {
   font-size: calc(.2vw + .8rem);
 }
 #mesh-properties > div .mesh-property input {
+  display: inline-block;
+}
+#mesh-properties > div .mesh-property input[type=checkbox] {
   height: calc(.2vw + .8rem);
   width: calc(.2vw + .8rem);
   position: absolute;
-  display: inline-block;
   cursor: pointer;
   visibility: hidden;
   margin: 2px;
+}
+#mesh-properties > div .mesh-property input[type=range] {
+  width: 6rem;
+  margin-left: 1rem;
 }
 #mesh-properties > div .mesh-property label {
   display: inline-block;
