@@ -28,7 +28,6 @@ section:not(:first-child) span, section:not(:first-child) ul {
   padding: 0.1rem;
   align-items: center;
   box-sizing: content-box;
-  font-size: calc(0.6vw + .6rem);
   text-decoration: none;
   background-color: #429252;
   border-radius: calc(.8vw + .6rem);
@@ -37,21 +36,22 @@ section:not(:first-child) span, section:not(:first-child) ul {
 .section-link-badge:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-.section-link-badge span {
+.section-link-badge > span {
   position: relative;
   display: block;
-  padding: 0 0.5rem;
+  padding: 0 calc(.2vw + .3rem);
   color: #243f4c;
   font-family: "Martel", serif;
   line-height: 140%;
+  font-size: calc(0.6vw + .6rem) !important;
 }
-.section-link-badge svg {
+.section-link-badge > svg {
   fill: #243f4c;
   border-radius: 50%;
   width: calc(.8vw + .6rem);
   margin-left: 3px;
 }
-.section-link-badge svg.circle-badge {
+.section-link-badge > svg.circle-badge {
   background: #243f4c;
   padding: 0.2rem;
   fill: #429252;
@@ -59,13 +59,13 @@ section:not(:first-child) span, section:not(:first-child) ul {
 .section-link-badge:hover {
   background-color: #1c313b;
 }
-.section-link-badge:hover span {
+.section-link-badge:hover > span {
   color: #429252;
 }
-.section-link-badge:hover svg {
+.section-link-badge:hover > svg {
   fill: #429252;
 }
-.section-link-badge:hover svg.circle-badge {
+.section-link-badge:hover > svg.circle-badge {
   background: #429252;
   fill: #1c313b;
 }

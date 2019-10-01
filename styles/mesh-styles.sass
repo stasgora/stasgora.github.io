@@ -34,33 +34,33 @@ section:not(:first-child)
   padding: .1rem
   align-items: center
   box-sizing: content-box
-  font-size: calc(0.6vw + .6rem)
   text-decoration: none
   background-color: $accent-color
   border-radius: $badge-size
   +mat-shadow
-  span
+  > span
     +relative-block
-    padding: 0 .5rem
+    padding: 0 calc(.2vw + .3rem)
     color: $bg-color
     +serif-font
     line-height: 140%
-  svg
+    font-size: calc(0.6vw + .6rem) !important
+  > svg
     fill: $bg-color
     border-radius: 50%
     width: $badge-size
     margin-left: 3px
-  svg.circle-badge
+  > svg.circle-badge
     background: $bg-color
     padding: .2rem
     fill: $accent-color
   &:hover
     background-color: darken($bg-color, 5%)
-    span
+    > span
       color: $accent-color
-    svg
+    > svg
       fill: $accent-color
-    svg.circle-badge
+    > svg.circle-badge
       background: $accent-color
       fill: darken($bg-color, 5%)
 
