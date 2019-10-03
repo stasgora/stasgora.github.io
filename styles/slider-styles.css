@@ -23,67 +23,61 @@ input[type=range]::-ms-track {
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  height: 12px;
-  width: 12px;
-  margin-top: -6px;
+  height: 14px;
+  width: 14px;
+  margin-top: -7px;
   border-radius: 50%;
   background: #074C94;
   cursor: pointer;
   border: none;
-  margin-top: -5px;
+  margin-top: -6px;
 }
 input[type=range]::-webkit-slider-thumb:active {
-  height: 16px;
-  width: 16px;
-  margin-top: -8px;
+  transform: scale(1.3);
 }
 
 input[type=range]::-moz-range-thumb {
-  height: 12px;
-  width: 12px;
-  margin-top: -6px;
+  height: 14px;
+  width: 14px;
+  margin-top: -7px;
   border-radius: 50%;
   background: #074C94;
   cursor: pointer;
   border: none;
 }
 input[type=range]::-moz-range-thumb:active {
-  height: 16px;
-  width: 16px;
-  margin-top: -8px;
+  transform: scale(1.3);
 }
 
 input[type=range]::-ms-thumb {
-  height: 12px;
-  width: 12px;
-  margin-top: -6px;
+  height: 14px;
+  width: 14px;
+  margin-top: -7px;
   border-radius: 50%;
   background: #074C94;
   cursor: pointer;
   border: none;
 }
 input[type=range]::-ms-thumb:active {
-  height: 16px;
-  width: 16px;
-  margin-top: -8px;
+  transform: scale(1.3);
 }
 
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 2px;
+  height: 3px;
   cursor: pointer;
   border-radius: 1.3px;
   background: rgba(0, 0, 0, 0.26);
-  margin: 6px 0;
+  margin: 7px 0;
 }
 
 input[type=range]::-moz-range-track {
   width: 100%;
-  height: 2px;
+  height: 3px;
   cursor: pointer;
   border-radius: 1.3px;
   background: rgba(0, 0, 0, 0.26);
-  margin: 6px 0;
+  margin: 7px 0;
 }
 
 input[type=range]::-moz-focus-outer {
@@ -92,11 +86,11 @@ input[type=range]::-moz-focus-outer {
 
 input[type=range]::-ms-track {
   width: 100%;
-  height: 2px;
+  height: 3px;
   cursor: pointer;
   border-radius: 1.3px;
   background: rgba(0, 0, 0, 0.26);
-  margin: 6px 0;
+  margin: 7px 0;
   background: transparent;
   border-color: transparent;
   color: transparent;
