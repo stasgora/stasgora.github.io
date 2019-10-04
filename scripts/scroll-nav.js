@@ -43,7 +43,11 @@ function bindScrollEvents() {
 			animateChangeSubpage(1);
 	});
 	//swipes
-	let hammer = new Hammer($('body').get(0), {touchAction: 'auto'});
+	delete Hammer.defaults.cssProps.userSelect;
+	let hammer = new Hammer($('body').get(0), {
+		touchAction: 'auto',
+		inputClass: Hammer.TouchInput
+	});
 	hammer.on('swipeleft', () => animateChangeSubpage(1));
 	hammer.on('swiperight', () => animateChangeSubpage(0));
 	hammer.get('swipe').set({threshold: 100});

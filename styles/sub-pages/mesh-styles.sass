@@ -3,7 +3,6 @@
 
 $property-mesh-size: calc(15vw + 10rem)
 $github-link-color: mix($text-color, $main-color, 25%)
-$badge-size: calc(.8vw + .6rem)
 $checkbox-size: calc(.2vw + .8rem)
 $layout-breakpoint: 700px
 
@@ -11,58 +10,28 @@ $accent-color: nth($accent-colors, 1)
 $bg-color: nth($bg-colors, 1)
 
 main > section:nth-child(1)
+  .section-link-badge
+    +section-link-badge-colors($accent-color, $bg-color)
+
   background-color: $bg-color
   h3, h5
     color: $accent-color
   > div:first-of-type
     background: linear-gradient(transparent, $bg-color)
   > div:last-child
+    position: absolute
+    bottom: 0
+    width: 100%
     margin-top: 2rem
     height: $bg-transition-size
     background: linear-gradient($bg-color, $main-bg-color)
 
-section:not(:first-child)
-  > span
-    display: block
-    margin-left: 2rem
-  span, ul
-    font-size: 1.1rem
-
-.section-link-badge
-  display: inline-flex
-  margin: .2rem 0 .2rem 1rem
-  padding: .1rem
-  align-items: center
-  box-sizing: content-box
-  text-decoration: none
-  background-color: $accent-color
-  border-radius: $badge-size
-  +mat-shadow
-  > span
-    +relative-block
-    padding: 0 calc(.2vw + .3rem)
-    color: $bg-color
-    +serif-font
-    line-height: 140%
-    font-size: calc(0.6vw + .6rem) !important
-  > svg
-    fill: $bg-color
-    border-radius: 50%
-    width: $badge-size
-    margin-left: 3px
-  > svg.circle-badge
-    background: $bg-color
-    padding: .2rem
-    fill: $accent-color
-  &:hover
-    background-color: darken($bg-color, 5%)
+  section:not(:first-child)
     > span
-      color: $accent-color
-    > svg
-      fill: $accent-color
-    > svg.circle-badge
-      background: $accent-color
-      fill: darken($bg-color, 5%)
+      display: block
+      margin-left: 2rem
+    span, ul
+      font-size: 1.1rem
 
 .split-section
   > div

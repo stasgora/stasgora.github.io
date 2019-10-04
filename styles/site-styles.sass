@@ -114,6 +114,28 @@ body
         > h3
           +relative-block
 
+  .section-link-badge
+    display: inline-flex
+    margin: .2rem 0 .2rem 1rem
+    padding: .1rem
+    align-items: center
+    box-sizing: content-box
+    text-decoration: none
+    border-radius: $badge-size
+    +mat-shadow
+    > span
+      +relative-block
+      padding: 0 calc(.2vw + .3rem)
+      +serif-font
+      line-height: 140%
+      font-size: calc(0.6vw + .6rem) !important
+    > svg
+      border-radius: 50%
+      width: $badge-size
+      margin-left: 3px
+    > svg.circle-badge
+      padding: .2rem
+
   nav
     position: fixed
     display: flex
@@ -124,6 +146,7 @@ body
     justify-content: space-between
     padding: 0 1rem 1rem
     transition: transform 0.5s ease-in-out
+    user-select: none
 
     div
       display: flex

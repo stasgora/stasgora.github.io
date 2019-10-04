@@ -7,13 +7,26 @@ $greyed-color: mix($text-color, $main-bg-color, 70%)
 $bg-color: nth($bg-colors, 2)
 
 $layout-breakpoint: 900px
+$grid-title-column-size: minmax(25%, auto)
 =one-section-grid
-  grid-template: "title . ." auto ". content content" auto / auto 1fr 1fr
+  grid-template: "title . ." auto ". content content" auto / $grid-title-column-size 1fr 1fr
   @media (max-width: $layout-breakpoint)
     grid-template: "title title" auto "content content" auto / 1fr 1fr
 
+=role
+  display: block
+  font-weight: 600
+  font-size: .8rem
+  text-transform: uppercase
+
 main
   > section:nth-child(2)
+    .role
+      margin-top: 1rem
+      +role
+    .section-link-badge
+      +section-link-badge-colors($sec-acc-color, $bg-color)
+
     background-color: $bg-color
     h3, h5
       color: $accent-color
@@ -25,9 +38,17 @@ main
     > section
       display: grid
       justify-items: center
+      > div
+        > span:nth-of-type(1)
+          font-size: 1.2rem
+          font-weight: 600
+          color: $sec-acc-color
+          +serif-font
+          &:after
+            content: ": "
 
     > section:nth-of-type(1)
-      grid-template: "title lang tools" auto ". other frameworks" auto / auto 1fr 1fr
+      grid-template: "title lang tools" auto ". other frameworks" auto / $grid-title-column-size 1fr 1fr
       @media (max-width: $layout-breakpoint)
         grid-template: "title title" auto "lang tools" auto "other frameworks" auto / 1fr 1fr
       @media (max-width: 600px)
@@ -36,15 +57,9 @@ main
       > h3
         text-align: center
       > div
-        > span
-          font-size: 1.2rem
-          font-weight: 600
-          color: $sec-acc-color
-          +serif-font
-          &:after
-            content: ": "
         > ul
           margin-top: .5rem
+          font-size: 1.1rem
           > li
             font-weight: 700
             > span
@@ -64,8 +79,7 @@ main
             display: block
             font-weight: 600
           > span:nth-child(1)
-            font-size: .8rem
-            text-transform: uppercase
+            +role
           > span:nth-child(2)
             color: $sec-acc-color
             font-size: 1.4rem
@@ -77,9 +91,8 @@ main
             margin: .5rem 0 1.6rem 1rem
             font-size: 1rem
             line-height: 1.5rem
-          p
-            text-indent: 1rem
+    p
+      text-indent: 1rem
 
     > section:nth-of-type(3)
       +one-section-grid
-      display: none

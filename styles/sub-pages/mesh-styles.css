@@ -2,6 +2,37 @@
 main > section:nth-child(1) {
   background-color: #243f4c;
 }
+main > section:nth-child(1) .section-link-badge {
+  background-color: #429252;
+  border-radius: calc(.8vw + .6rem);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+main > section:nth-child(1) .section-link-badge:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+main > section:nth-child(1) .section-link-badge > span {
+  color: #243f4c;
+}
+main > section:nth-child(1) .section-link-badge > svg {
+  fill: #243f4c;
+}
+main > section:nth-child(1) .section-link-badge > svg.circle-badge {
+  background: #243f4c;
+  fill: #429252;
+}
+main > section:nth-child(1) .section-link-badge:hover {
+  background-color: #1c313b;
+}
+main > section:nth-child(1) .section-link-badge:hover > span {
+  color: #429252;
+}
+main > section:nth-child(1) .section-link-badge:hover > svg {
+  fill: #429252;
+}
+main > section:nth-child(1) .section-link-badge:hover > svg.circle-badge {
+  background: #429252;
+  fill: #1c313b;
+}
 main > section:nth-child(1) h3, main > section:nth-child(1) h5 {
   color: #429252;
 }
@@ -9,65 +40,19 @@ main > section:nth-child(1) > div:first-of-type {
   background: linear-gradient(transparent, #243f4c);
 }
 main > section:nth-child(1) > div:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   margin-top: 2rem;
   height: 3rem;
   background: linear-gradient(#243f4c, #222d32);
 }
-
-section:not(:first-child) > span {
+main > section:nth-child(1) section:not(:first-child) > span {
   display: block;
   margin-left: 2rem;
 }
-section:not(:first-child) span, section:not(:first-child) ul {
+main > section:nth-child(1) section:not(:first-child) span, main > section:nth-child(1) section:not(:first-child) ul {
   font-size: 1.1rem;
-}
-
-.section-link-badge {
-  display: inline-flex;
-  margin: 0.2rem 0 0.2rem 1rem;
-  padding: 0.1rem;
-  align-items: center;
-  box-sizing: content-box;
-  text-decoration: none;
-  background-color: #429252;
-  border-radius: calc(.8vw + .6rem);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-.section-link-badge:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-.section-link-badge > span {
-  position: relative;
-  display: block;
-  padding: 0 calc(.2vw + .3rem);
-  color: #243f4c;
-  font-family: "Martel", serif;
-  line-height: 140%;
-  font-size: calc(0.6vw + .6rem) !important;
-}
-.section-link-badge > svg {
-  fill: #243f4c;
-  border-radius: 50%;
-  width: calc(.8vw + .6rem);
-  margin-left: 3px;
-}
-.section-link-badge > svg.circle-badge {
-  background: #243f4c;
-  padding: 0.2rem;
-  fill: #429252;
-}
-.section-link-badge:hover {
-  background-color: #1c313b;
-}
-.section-link-badge:hover > span {
-  color: #429252;
-}
-.section-link-badge:hover > svg {
-  fill: #429252;
-}
-.section-link-badge:hover > svg.circle-badge {
-  background: #429252;
-  fill: #1c313b;
 }
 
 .split-section > div {

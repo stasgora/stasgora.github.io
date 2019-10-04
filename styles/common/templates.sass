@@ -23,6 +23,27 @@
   &:hover
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
 
+=section-link-badge-colors($accent-color, $bg-color)
+  background-color: $accent-color
+  border-radius: $badge-size
+  +mat-shadow
+  > span
+    color: $bg-color
+  > svg
+    fill: $bg-color
+  > svg.circle-badge
+    background: $bg-color
+    fill: $accent-color
+  &:hover
+    background-color: darken($bg-color, 5%)
+    > span
+      color: $accent-color
+    > svg
+      fill: $accent-color
+    > svg.circle-badge
+      background: $accent-color
+      fill: darken($bg-color, 5%)
+
 @mixin text-selection($text-color, $bg-color)
   ::selection
     color: $text-color

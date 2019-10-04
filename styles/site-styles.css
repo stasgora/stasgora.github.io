@@ -126,6 +126,35 @@ body main > section section:not(:first-child) > h3 {
   position: relative;
   display: block;
 }
+body .section-link-badge {
+  display: inline-flex;
+  margin: 0.2rem 0 0.2rem 1rem;
+  padding: 0.1rem;
+  align-items: center;
+  box-sizing: content-box;
+  text-decoration: none;
+  border-radius: calc(.8vw + .6rem);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+body .section-link-badge:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+body .section-link-badge > span {
+  position: relative;
+  display: block;
+  padding: 0 calc(.2vw + .3rem);
+  font-family: "Martel", serif;
+  line-height: 140%;
+  font-size: calc(0.6vw + .6rem) !important;
+}
+body .section-link-badge > svg {
+  border-radius: 50%;
+  width: calc(.8vw + .6rem);
+  margin-left: 3px;
+}
+body .section-link-badge > svg.circle-badge {
+  padding: 0.2rem;
+}
 body nav {
   position: fixed;
   display: flex;
@@ -136,6 +165,7 @@ body nav {
   justify-content: space-between;
   padding: 0 1rem 1rem;
   transition: transform 0.5s ease-in-out;
+  user-select: none;
 }
 body nav div {
   display: flex;
