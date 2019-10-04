@@ -133,7 +133,7 @@ body .section-link-badge {
   align-items: center;
   box-sizing: content-box;
   text-decoration: none;
-  border-radius: calc(.8vw + .6rem);
+  border-radius: calc(.6vw + .4rem);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 body .section-link-badge:hover {
@@ -145,11 +145,11 @@ body .section-link-badge > span {
   padding: 0 calc(.2vw + .3rem);
   font-family: "Martel", serif;
   line-height: 140%;
-  font-size: calc(0.6vw + .6rem) !important;
+  font-size: calc(.6vw + .4rem) !important;
 }
 body .section-link-badge > svg {
   border-radius: 50%;
-  width: calc(.8vw + .6rem);
+  width: calc(.6vw + .4rem);
   margin-left: 3px;
 }
 body .section-link-badge > svg.circle-badge {

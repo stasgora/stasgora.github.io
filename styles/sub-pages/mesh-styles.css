@@ -4,7 +4,7 @@ main > section:nth-child(1) {
 }
 main > section:nth-child(1) .section-link-badge {
   background-color: #429252;
-  border-radius: calc(.8vw + .6rem);
+  border-radius: calc(.6vw + .4rem);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 main > section:nth-child(1) .section-link-badge:hover {
