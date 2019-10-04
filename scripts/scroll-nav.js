@@ -68,10 +68,12 @@ function changeSubpage(index) {
 	if (index >= subpageCount)
 		return;
 	main.removeClass('subpage-transition');
-	main.css('transform', parseInt(index) === 0 ? 'none' : 'translateX(-50%)');
 	setTimeout(() => {
-		main.addClass('subpage-transition');
-	}, 1);
+		main.css('transform', parseInt(index) === 0 ? 'none' : 'translateX(-50%)');
+		setTimeout(() => {
+			main.addClass('subpage-transition');
+		}, 10);
+	}, 10);
 	changeNavButtons(index);
 }
 

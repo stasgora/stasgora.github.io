@@ -95,6 +95,7 @@ body
 
     > section
       width: 100%
+      padding-bottom: 5rem
       > div:first-of-type
         height: $bg-transition-size
         bottom: calc(#{$bg-transition-size} - 1px)
@@ -197,15 +198,15 @@ body
         padding: calc(.2vw + .2rem)
         margin: 0 .6rem
         border-radius: 50%
-        background-color: darken($text-color, 20%)
+        background-color: $main-dark-color
         +mat-shadow
         svg
           display: block
-          fill: $main-dark-color
-      a:hover
-        background-color: $main-dark-color
-        svg
           fill: $text-color
+      a:hover
+        background-color: $text-color
+        svg
+          fill: $main-dark-color
 
       a:nth-of-type(1)
         padding: .3rem

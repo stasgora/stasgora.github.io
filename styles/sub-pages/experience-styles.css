@@ -40,6 +40,9 @@ main > section:nth-child(2) .section-link-badge:hover > svg.circle-badge {
   background: #555fbc;
   fill: #181f23;
 }
+main > section:nth-child(2) h3 {
+  justify-self: start;
+}
 main > section:nth-child(2) h3, main > section:nth-child(2) h5 {
   color: #6546a6;
 }
