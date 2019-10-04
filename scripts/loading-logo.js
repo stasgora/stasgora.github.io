@@ -35,11 +35,16 @@ function finishLoading() {
 			setTimeout(() => logoBox.css('transition-property', 'none'), 1000);
 		}, 400);
 	}, 1);
+	sessionStorage.setItem(lastSubpageKey, '0')
 }
 
 function skipLoading() {
 	const logo = $('#logo-box > div');
 	const logoBox = $('#logo-box');
+
+	let lastSubpage = sessionStorage.getItem(lastSubpageKey);
+	if(lastSubpage !== null)
+		setTimeout(() => changeSubpage(lastSubpage), 1);
 	$('body').addClass('loaded');
 	logoBox.addClass('logo-box-pos');
 	logoBox.css('transition-property', 'none');

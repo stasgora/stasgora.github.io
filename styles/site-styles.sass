@@ -84,12 +84,14 @@ body
     padding-top: calc(2vw + 1rem)
     padding-left: calc(#{$page-margin} + #{$final-logo-size} * 1.5)
 
+  .subpage-transition
+    transition: transform 1s ease-in-out
+
   main
     width: 200%
     display: grid
     grid-template-columns: 50% 50%
     justify-items: center
-    transition: transform 1s ease-in-out
 
     > section
       width: 100%

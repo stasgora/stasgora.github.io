@@ -6,6 +6,9 @@ let nav, main, navButtons;
 const pinned = 'nav-pinned';
 const unpinned = 'nav-unpinned';
 
+const lastSubpageKey = 'last-subpage';
+const subpageCount = 2;
+
 $(() => {
 	nav = $('nav');
 	main = $('main');
@@ -30,25 +33,45 @@ $(() => {
 
 function bindScrollEvents() {
 	//buttons
-	navButtons[0].click(() => onNavButtonPress(0));
-	navButtons[1].click(() => onNavButtonPress(1));
+	navButtons[0].click(() => animateChangeSubpage(0));
+	navButtons[1].click(() => animateChangeSubpage(1));
 	//arrow keys
 	$(document).keydown(event => {
 		if(event.which === 37)
-			onNavButtonPress(0);
+			animateChangeSubpage(0);
 		else if(event.which === 39)
-			onNavButtonPress(1);
+			animateChangeSubpage(1);
 	});
 	//swipes
 	let hammer = new Hammer($('body').get(0), {touchAction: 'auto'});
-	hammer.on('swipeleft', () => onNavButtonPress(1));
-	hammer.on('swiperight', () => onNavButtonPress(0));
+	hammer.on('swipeleft', () => animateChangeSubpage(1));
+	hammer.on('swiperight', () => animateChangeSubpage(0));
 	hammer.get('swipe').set({threshold: 100});
 	hammer.off('pinch');
 }
 
-function onNavButtonPress(index) {
+function animateChangeSubpage(index) {
+	index = parseInt(index);
+	if(index >= subpageCount)
+		return;
 	main.css('transform', index === 0 ? 'none' : 'translateX(-50%)');
+	changeNavButtons(index);
+	sessionStorage.setItem(lastSubpageKey, index);
+}
+
+function changeSubpage(index) {
+	index = parseInt(index);
+	if (index >= subpageCount)
+		return;
+	main.removeClass('subpage-transition');
+	main.css('transform', parseInt(index) === 0 ? 'none' : 'translateX(-50%)');
+	setTimeout(() => {
+		main.addClass('subpage-transition');
+	}, 1);
+	changeNavButtons(index);
+}
+
+function changeNavButtons(index) {
 	navButtons[index].css('opacity', '0');
 	setTimeout(() => navButtons[index].css('visibility', 'hidden'), 200);
 	navButtons[(index + 1) % 2].css('opacity', '.5');

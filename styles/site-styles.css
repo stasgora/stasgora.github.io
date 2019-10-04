@@ -92,12 +92,14 @@ body #title {
   padding-top: calc(2vw + 1rem);
   padding-left: calc(5vw + (2vw + 1rem) * 1.5);
 }
+body .subpage-transition {
+  transition: transform 1s ease-in-out;
+}
 body main {
   width: 200%;
   display: grid;
   grid-template-columns: 50% 50%;
   justify-items: center;
-  transition: transform 1s ease-in-out;
 }
 body main > section {
   width: 100%;
