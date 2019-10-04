@@ -154,7 +154,7 @@ section:not(:first-child) span, section:not(:first-child) ul {
   border: 2px solid #3596fa;
 }
 #mesh-properties > div .mesh-property input[type=checkbox]:checked + label::before {
-  background: #4ea3fb url("../assets/svg/checkmark.svg");
+  background: #4ea3fb url("../../assets/svg/checkmark.svg");
 }
 
 /*# sourceMappingURL=mesh-styles.css.map */
