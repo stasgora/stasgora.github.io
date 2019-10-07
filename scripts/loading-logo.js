@@ -8,15 +8,15 @@ $(() => {
 
 	if(sessionStorage.getItem(introKey) !== introPlayed) {
 		setTimeout(() => {
-			$(logo).click(handleScroll);
+			$(logo).click(enterSite);
 		}, 2000);
 	} else skipLoading();
 });
 
-function handleScroll() {
+function enterSite() {
 	finishLoading();
 	sessionStorage.setItem(introKey, introPlayed);
-	$(window).unbind('scroll', handleScroll);
+	$(logo).unbind('click', enterSite);
 }
 
 function finishLoading() {
@@ -36,7 +36,7 @@ function finishLoading() {
 			logo.addClass('loading-transition-anim');
 
 			setTimeout(() => {
-				extendLogoNav();
+				setupSectionNav();
 				logoBox.css('transition-property', 'none');
 			}, 1000);
 		}, 400);
@@ -54,14 +54,9 @@ function skipLoading() {
 	logo.addClass('loading-transition-anim');
 	logo.css('animation-duration', '0s');
 	$('#loading-cover').css('transition', 'none');
-	extendLogoNav();
+	setupSectionNav();
 }
 
 function preserveProperties(element, properties) {
 	properties.forEach(property => element.css(property, element.css(property)));
-}
-
-function extendLogoNav() {
-	$('#logo-box > div:last-child').css('display', 'block');
-	logo.click(() => logoBox.toggleClass(sectionNavExtendedClass));
 }

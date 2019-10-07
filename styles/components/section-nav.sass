@@ -7,13 +7,13 @@ $fold-time: .8s
 
 $bg-color: nth($bg-colors, 2)
 
-.section-nav-extended > div:last-child
+.section-nav-extended
   @for $i from 1 through $max-nav-el-count
     > div:nth-child(#{$i})
       top: calc((#{$nav-size} + .8rem) * #{$i - 1} + 1vw + 2rem) !important
       transition-delay: ($i - 1) * $fold-time / 10 !important
 
-#logo-box:not(.section-nav-extended) > div:last-child
+#section-nav:not(.section-nav-extended)
   @for $i from 1 through $max-nav-el-count
     > div:nth-child(#{$i})
       transition-delay: ($max-nav-el-count - $i) * $fold-time / 10 !important
@@ -21,7 +21,7 @@ $bg-color: nth($bg-colors, 2)
 #logo-box
   > div:first-child
     cursor: pointer
-  > div:last-child
+  #section-nav
     z-index: 1
     width: 100%
     position: absolute
