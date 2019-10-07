@@ -1,0 +1,39 @@
+@import "../common/variables"
+@import "../common/templates"
+
+$nav-size: '(.5vw + .5rem)'
+$max-nav-el-count: 4
+$fold-time: .8s
+
+$bg-color: nth($bg-colors, 2)
+
+.section-nav-extended > div:last-child
+  @for $i from 1 through $max-nav-el-count
+    > div:nth-child(#{$i})
+      top: calc((#{$nav-size} + .8rem) * #{$i - 1} + 1vw + 2rem) !important
+      transition-delay: ($i - 1) * $fold-time / 10 !important
+
+#logo-box:not(.section-nav-extended) > div:last-child
+  @for $i from 1 through $max-nav-el-count
+    > div:nth-child(#{$i})
+      transition-delay: ($max-nav-el-count - $i) * $fold-time / 10 !important
+
+#logo-box
+  > div:first-child
+    cursor: pointer
+  > div:last-child
+    z-index: 1
+    width: 100%
+    position: absolute
+    top: calc(50% - #{$nav-size} / 2)
+    display: none
+    > div
+      position: absolute
+      width: calc(#{$nav-size})
+      height: calc(#{$nav-size})
+      top: 0
+      margin: 0 calc(50% - #{$nav-size} / 2)
+      border-radius: 50%
+      cursor: pointer
+      background-color: $main-color
+      transition: top $fold-time ease-out

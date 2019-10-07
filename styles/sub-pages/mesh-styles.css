@@ -33,6 +33,9 @@ main > section:nth-child(1) .section-link-badge:hover > svg.circle-badge {
   background: #429252;
   fill: #1c313b;
 }
+main > section:nth-child(1) > video {
+  transform: scale(-1);
+}
 main > section:nth-child(1) h3, main > section:nth-child(1) h5 {
   color: #429252;
 }

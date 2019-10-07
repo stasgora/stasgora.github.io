@@ -1,0 +1,1 @@
+const sectionNavExtendedClass = 'section-nav-extended';

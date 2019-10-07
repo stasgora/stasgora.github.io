@@ -1,10 +1,14 @@
 const introKey = 'loading-intro';
 const introPlayed = 'played';
+let logo, logoBox;
 
 $(() => {
+	logoBox = $('#logo-box');
+	logo = $('#logo-box > div:first-child');
+
 	if(sessionStorage.getItem(introKey) !== introPlayed) {
 		setTimeout(() => {
-			$(window).bind('scroll', handleScroll);
+			$(logo).click(handleScroll);
 		}, 2000);
 	} else skipLoading();
 });
@@ -16,7 +20,6 @@ function handleScroll() {
 }
 
 function finishLoading() {
-	const logo = $('#logo-box > div');
 	preserveProperties(logo, ['width', 'transform']);
 	//switch animations
 	logo.removeClass('loading-anim');
@@ -32,16 +35,16 @@ function finishLoading() {
 			logo.removeClass('loading-retract-anim');
 			logo.addClass('loading-transition-anim');
 
-			setTimeout(() => logoBox.css('transition-property', 'none'), 1000);
+			setTimeout(() => {
+				extendLogoNav();
+				logoBox.css('transition-property', 'none');
+			}, 1000);
 		}, 400);
 	}, 1);
 	sessionStorage.setItem(lastSubpageKey, '0')
 }
 
 function skipLoading() {
-	const logo = $('#logo-box > div');
-	const logoBox = $('#logo-box');
-
 	let lastSubpage = sessionStorage.getItem(lastSubpageKey);
 	if(lastSubpage !== null)
 		setTimeout(() => changeSubpage(lastSubpage), 1);
@@ -51,8 +54,14 @@ function skipLoading() {
 	logo.addClass('loading-transition-anim');
 	logo.css('animation-duration', '0s');
 	$('#loading-cover').css('transition', 'none');
+	extendLogoNav();
 }
 
 function preserveProperties(element, properties) {
 	properties.forEach(property => element.css(property, element.css(property)));
+}
+
+function extendLogoNav() {
+	$('#logo-box > div:last-child').css('display', 'block');
+	logo.click(() => logoBox.toggleClass(sectionNavExtendedClass));
 }
