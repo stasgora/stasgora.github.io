@@ -48,6 +48,7 @@
   height: calc((.4vw + .4em));
   box-sizing: content-box;
   cursor: pointer;
+  transition: top 0.8s ease-out;
 }
 #logo-box #section-nav > div::after {
   content: "";
@@ -57,7 +58,6 @@
   height: calc((.4vw + .4em));
   border-radius: 50%;
   background-color: #074C94;
-  transition: top 0.8s ease-out;
 }
 
 /*# sourceMappingURL=section-nav.css.map */

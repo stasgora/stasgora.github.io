@@ -37,6 +37,7 @@ $bg-color: nth($bg-colors, 2)
       height: calc(#{$nav-size})
       box-sizing: content-box
       cursor: pointer
+      transition: top $fold-time ease-out
       &::after
         content: ''
         position: absolute
@@ -45,4 +46,3 @@ $bg-color: nth($bg-colors, 2)
         height: calc(#{$nav-size})
         border-radius: 50%
         background-color: $main-color
-        transition: top $fold-time ease-out
