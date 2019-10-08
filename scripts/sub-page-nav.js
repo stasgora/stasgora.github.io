@@ -8,6 +8,7 @@ const unpinned = 'nav-unpinned';
 
 const lastSubpageKey = 'last-subpage';
 const subpageCount = 2;
+let currentSubPage = 0;
 
 $(() => {
 	nav = $('nav');
@@ -56,16 +57,17 @@ function bindScrollEvents() {
 
 function animateChangeSubpage(index) {
 	index = parseInt(index);
-	if(index >= subpageCount)
+	if (!subPageIndexValid(index))
 		return;
 	main.css('transform', index === 0 ? 'none' : 'translateX(-50%)');
 	changeNavButtons(index);
 	sessionStorage.setItem(lastSubpageKey, index);
+	onSubPageChange(index);
 }
 
 function changeSubpage(index) {
 	index = parseInt(index);
-	if (index >= subpageCount)
+	if (!subPageIndexValid(index))
 		return;
 	main.removeClass('subpage-transition');
 	setTimeout(() => {
@@ -75,6 +77,14 @@ function changeSubpage(index) {
 		}, 10);
 	}, 10);
 	changeNavButtons(index);
+	onSubPageChange(index);
+}
+
+function subPageIndexValid(index) {
+	const valid = index !== currentSubPage && index >= 0 && index < subpageCount;
+	if(valid)
+		currentSubPage = index;
+	return valid;
 }
 
 function changeNavButtons(index) {

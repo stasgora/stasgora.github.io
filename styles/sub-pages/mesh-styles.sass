@@ -1,18 +1,21 @@
 @import "../common/templates"
 @import "../common/variables"
 
+$sub-page-index: 1
 $property-mesh-size: calc(15vw + 10rem)
 $github-link-color: mix($text-color, $main-color, 25%)
 $checkbox-size: calc(.2vw + .8rem)
 $layout-breakpoint: 700px
 
-$accent-color: nth($accent-colors, 1)
-$bg-color: nth($bg-colors, 1)
+$accent-color: nth($accent-colors, $sub-page-index)
+$bg-color: nth($bg-colors, $sub-page-index)
 
 main > section:nth-child(1)
   .section-link-badge
     +section-link-badge-colors($accent-color, $bg-color)
 
+  > video
+    transform: scale(-1)
   background-color: $bg-color
   h3, h5
     color: $accent-color

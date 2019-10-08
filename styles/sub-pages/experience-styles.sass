@@ -1,10 +1,12 @@
 @import "../common/variables"
 @import "../common/templates"
 
-$accent-color: nth($accent-colors, 2)
+$sub-page-index: 2
+
+$accent-color: nth($accent-colors, $sub-page-index)
+$bg-color: nth($bg-colors, $sub-page-index)
 $sec-acc-color: lighten(mix($accent-color, $main-color, 60%), 10%)
 $greyed-color: mix($text-color, $main-bg-color, 70%)
-$bg-color: nth($bg-colors, 2)
 
 $layout-breakpoint: 900px
 $grid-title-column-size: minmax(25%, auto)

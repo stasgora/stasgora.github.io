@@ -5,12 +5,17 @@
 $base-logo-color: #074C94
 $logo-color: rgba($base-logo-color, 0.5)
 
+//morph
+$morph-values: 0.5 1.6
+$morph-step-count: 5
+
 //size
 $logo-size: '(8vw + 3rem)'
 $computed-logo-size: calc(#{$logo-size})
 $logo-border-radius: calc(#{$logo-size} / 4)
 
 $final-logo-border-radius: calc(#{$final-logo-size} / 4)
+$final-logo-box-size:  calc(#{$final-logo-size})
 
 $logo-top-pos: 40%
 
@@ -19,10 +24,6 @@ $load-start-duration: 2s
 $load-cycle-duration: 2s
 $load-retract-duration: 0.5s
 $load-finish-duration: 1s
-
-//morph
-$morph-values: 0.5 1.6
-$morph-step-count: 5
 
 //position
 $logo-box-top: calc(#{$logo-top-pos} - #{$logo-size} / 2)
@@ -72,7 +73,7 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
   100%
     width: calc(#{$final-logo-size} * #{nth($morph-values, 1)})
     height: calc(#{$final-logo-size})
-    margin: calc(#{$logo-size} / 2 - #{$final-logo-size} / 2) auto
+    margin: 0 auto
     border-radius: $final-logo-border-radius
     +transform(rotate(30deg))
 
@@ -86,10 +87,12 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
   animation: loading-finish forwards $load-finish-duration ease-out
 
 .logo-box-pos
-  top: calc(#{$logo-size} / -2 + #{$final-logo-size} / 2 + 2vw + 1rem) !important
-  left: calc(#{$logo-box-width} / -2 + #{$final-logo-size} / 2 + #{$page-margin}) !important
+  top: calc(2vw + 1rem) !important
+  left: calc(#{$page-margin}) !important
+  width: $final-logo-box-size !important
+  height: $final-logo-box-size !important
   transition: all $load-finish-duration ease-in-out $load-retract-duration
-  transition-property: top, left
+  transition-property: top, left, width, height
 
 #loading-cover
   transition: opacity $load-finish-duration ease-in-out $load-retract-duration, visibility 0s ease $load-finish-duration + $load-retract-duration
@@ -99,7 +102,7 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
     opacity: 0
     visibility: hidden
 
-  #logo-box > div
+  #logo-box > div:first-child
     width: $computed-logo-size
     border-radius: 50% !important
     transition: all $load-retract-duration cubic-bezier(0.4, 0, 1, 0.8)
@@ -115,11 +118,12 @@ $logo-box-width: '#{$logo-size} * #{nth($morph-values, 2)}'
   top: $logo-box-top
   left: calc(50% - #{$logo-box-width} / 2)
 
-  > div
+  > div:first-child
     height: $computed-logo-size
     border-radius: $logo-border-radius
     margin: auto
     background: $logo-color
+    z-index: inherit
     box-shadow: inset 0 0 1.2rem 0.6rem rgba(146, 204, 255, 0.2), inset 0 0 3rem 1.5rem rgba(0, 134, 255, 0.4)
 
     &:before, &:after

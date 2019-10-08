@@ -67,13 +67,16 @@
 
 		<link href="styles/site-styles.css" rel="stylesheet" type="text/css">
 		<link href="styles/sub-pages/mesh-styles.css" rel="stylesheet" type="text/css">
-		<link href="styles/components/loading-logo.css" rel="stylesheet" type="text/css">
 		<link href="styles/sub-pages/experience-styles.css" rel="stylesheet" type="text/css">
+
 		<link href="styles/components/slider-styles.css" rel="stylesheet" type="text/css">
+		<link href="styles/components/section-nav.css" rel="stylesheet" type="text/css">
+		<link href="styles/components/loading-logo.css" rel="stylesheet" type="text/css">
 
 		<script src="scripts/loading-logo.js" type="application/javascript"></script>
-		<script src="scripts/scroll-nav.js" type="application/javascript"></script>
 		<script src="scripts/mesh-properties.js" type="application/javascript"></script>
+		<script src="scripts/sub-page-nav.js" type="application/javascript"></script>
+		<script src="scripts/section-nav.js" type="application/javascript"></script>
 	</head>
 	<body>
 		<div id="loading-cover">
@@ -82,7 +85,7 @@
 					<path d="m 12,0.90039062 c -4.1657005,0 -7.5644531,3.39876948 -7.5644531,7.56445318 v 7.0703122 c 0,4.165684 3.3987483,7.564453 7.5644531,7.564453 4.165683,0 7.564453,-3.398769 7.564453,-7.564453 V 8.4648438 C 19.564453,4.2991603 16.165679,0.90039062 12,0.90039062 Z m 0,1.94921878 c 3.112431,0 5.615234,2.5028076 5.615234,5.6152344 v 7.0703122 c 0,3.112427 -2.502807,5.615235 -5.615234,5.615235 -3.1124552,0 -5.6152344,-2.502808 -5.6152344,-5.615235 V 8.4648438 C 6.3847656,5.3524172 8.8875405,2.8496094 12,2.8496094 Z"/>
 					<path d="m 11.984375,5.4902344 a 0.97453969,0.97453969 0 0 0 -0.958984,0.9863281 v 1.9414063 a 0.974609,0.974609 0 1 0 1.949218,0 V 6.4765625 A 0.97453969,0.97453969 0 0 0 11.984375,5.4902344 Z"/>
 				</svg>
-				Scroll down to begin
+				Tap to begin
 			</div>
 		</div>
 		<!--[if IE]>
@@ -94,6 +97,7 @@
 		<!--<div id="title">Stanisław Góra</div>-->
 		<div id="logo-box">
 			<div class="loading-anim"></div>
+			<div id="section-nav"></div>
 		</div>
 		<main class="subpage-transition">
 			<section>
@@ -103,7 +107,7 @@
 				<h1>Mesh Editor</h1>
 				<div></div>
 				<section id="mesh-editor-description" class="split-section">
-					<h5 style="display: inline-block">
+					<h5 style="display: inline-block" data-nav-title="Description">
 						Desktop application designed to turn raster images into low poly vector art
 						<a class="section-link-badge" href="https://github.com/stasgora/mesh-editor" target="_blank" title="Mesh Editor GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -127,7 +131,7 @@
 					</div>
 				</section>
 				<section id="mesh-properties" class="split-section">
-					<h3>Layers</h3>
+					<h3 data-nav-title="Layers showcase">Layers</h3>
 					<span>An interactive showcase</span>
 					<div>
 						<div>
@@ -185,7 +189,7 @@
 					</div>
 				</section>
 				<section>
-					<h3 style="display: inline-block">
+					<h3 style="display: inline-block" data-nav-title="Observetree Library">
 						Observetree Library
 						<a class="section-link-badge" href="https://github.com/stasgora/observetree" target="_blank" title="Observetree GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -221,7 +225,7 @@
 				<h1>Experience</h1>
 				<div></div>
 				<section>
-					<h3 style="grid-area: title">Technologies</h3>
+					<h3 style="grid-area: title" data-nav-title="Technologies overview">Technologies</h3>
 					<div style="grid-area: lang">
 						<span>Languages</span>
 						<ul>
@@ -262,7 +266,7 @@
 					</div>
 				</section>
 				<section>
-					<h3 style="grid-area: title">Work Experience</h3>
+					<h3 style="grid-area: title" data-nav-title="Work Experience">Work Experience</h3>
 					<div style="grid-area: content">
 						<div>
 							<span>Software Engineer</span>
@@ -309,7 +313,7 @@
 					</div>
 				</section>
 				<section>
-					<h3 style="grid-area: title">Projects</h3>
+					<h3 style="grid-area: title" data-nav-title="Projects">Projects</h3>
 					<div style="grid-area: content">
 						<span>
 							WikiGraph
