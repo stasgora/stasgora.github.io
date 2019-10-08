@@ -2,6 +2,7 @@
 @import "../common/templates"
 
 $nav-size: '(.4vw + .4em)'
+$nav-margin: .4rem
 $max-nav-el-count: 4
 $fold-time: .8s
 
@@ -10,7 +11,7 @@ $bg-color: nth($bg-colors, 2)
 .section-nav-extended
   @for $i from 1 through $max-nav-el-count
     > div:nth-child(#{$i})
-      top: calc((#{$nav-size} + .8rem) * #{$i - 1} + 1vw + 2rem) !important
+      top: calc((#{$nav-size} + #{$nav-margin * 2}) * #{$i - 1} + 1vw + 2rem) !important
       transition-delay: ($i - 1) * $fold-time / 10 !important
 
 #section-nav:not(.section-nav-extended)
@@ -27,13 +28,21 @@ $bg-color: nth($bg-colors, 2)
     position: absolute
     top: calc(50% - #{$nav-size} / 2)
     display: none
+    padding: 0 calc(50% - #{$nav-size} / 2 - #{$nav-margin})
     > div
       position: absolute
+      top: 0
+      padding: $nav-margin
       width: calc(#{$nav-size})
       height: calc(#{$nav-size})
-      top: 0
-      margin: 0 calc(50% - #{$nav-size} / 2)
-      border-radius: 50%
+      box-sizing: content-box
       cursor: pointer
-      background-color: $main-color
-      transition: top $fold-time ease-out
+      &::after
+        content: ''
+        position: absolute
+        display: block
+        width: calc(#{$nav-size})
+        height: calc(#{$nav-size})
+        border-radius: 50%
+        background-color: $main-color
+        transition: top $fold-time ease-out
