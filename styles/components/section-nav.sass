@@ -11,7 +11,7 @@ $bg-color: nth($bg-colors, 2)
 .section-nav-extended
   @for $i from 1 through $max-nav-el-count
     > div:nth-child(#{$i})
-      top: calc((#{$nav-size} + #{$nav-margin * 2}) * #{$i - 1} + 1vw + 2rem) !important
+      top: calc((#{$nav-size} + #{$nav-margin * 2}) * #{$i - 1} + 2vw + 1rem) !important
       transition-delay: ($i - 1) * $fold-time / 10 !important
 
 #section-nav:not(.section-nav-extended)

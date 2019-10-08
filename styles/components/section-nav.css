@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap");
 .section-nav-extended > div:nth-child(1) {
-  top: calc(((.4vw + .4em) + 0.8rem) * 0 + 1vw + 2rem) !important;
+  top: calc(((.4vw + .4em) + 0.8rem) * 0 + 2vw + 1rem) !important;
   transition-delay: 0s !important;
 }
 .section-nav-extended > div:nth-child(2) {
-  top: calc(((.4vw + .4em) + 0.8rem) * 1 + 1vw + 2rem) !important;
+  top: calc(((.4vw + .4em) + 0.8rem) * 1 + 2vw + 1rem) !important;
   transition-delay: 0.08s !important;
 }
 .section-nav-extended > div:nth-child(3) {
-  top: calc(((.4vw + .4em) + 0.8rem) * 2 + 1vw + 2rem) !important;
+  top: calc(((.4vw + .4em) + 0.8rem) * 2 + 2vw + 1rem) !important;
   transition-delay: 0.16s !important;
 }
 .section-nav-extended > div:nth-child(4) {
-  top: calc(((.4vw + .4em) + 0.8rem) * 3 + 1vw + 2rem) !important;
+  top: calc(((.4vw + .4em) + 0.8rem) * 3 + 2vw + 1rem) !important;
   transition-delay: 0.24s !important;
 }
 
