@@ -30,7 +30,9 @@ function onSubPageChange(index) {
 
 function handleNavElementClick(element) {
 	const position = Math.min($($(element).data(targetDataElement)).offset().top, $(document).height() - $(window).height());
-	$('html').animate({ scrollTop: position - $('#logo-box').height() }, 800,'swing');
+	let scrollEl = $('html');
+	scrollEl.stop(true);
+	scrollEl.animate({ scrollTop: position - $('#logo-box').height() }, 800,'swing');
 }
 
 function getNavElement(title, targetElement) {
