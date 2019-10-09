@@ -48,8 +48,8 @@
 		<link href="https://sgora.dev" rel="canonical">
 		<meta content="3Vee9qNtwymCULcX4tKpaW59Xzcs0icxBL08NR8S2CE" name="google-site-verification"/>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148599570-1"></script>
-		<script>
+		<script defer src="https://www.googletagmanager.com/gtag/js?id=UA-148599570-1"></script>
+		<script defer>
 			window.dataLayer = window.dataLayer || [];
 			function gtag() {
 				dataLayer.push(arguments);
@@ -58,25 +58,25 @@
 			gtag('config', 'UA-148599570-1');
 		</script>
 
-		<script crossorigin="anonymous"
+		<script defer crossorigin="anonymous"
 		        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 		        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"
 		        integrity="sha256-GMd3rFxMDNnM5JQEpiKLLl8kSrDuG5egqchk758z59g="
 		        crossorigin="anonymous"></script>
 
-		<link href="styles/site-styles.css" rel="stylesheet" type="text/css">
-		<link href="styles/sub-pages/mesh-styles.css" rel="stylesheet" type="text/css">
-		<link href="styles/sub-pages/experience-styles.css" rel="stylesheet" type="text/css">
+		<link href="styles/site-styles.min.css" rel="stylesheet" type="text/css">
+		<link href="styles/sub-pages/mesh-styles.min.css" rel="stylesheet" type="text/css">
+		<link href="styles/sub-pages/experience-styles.min.css" rel="stylesheet" type="text/css">
 
-		<link href="styles/components/slider-styles.css" rel="stylesheet" type="text/css">
-		<link href="styles/components/section-nav.css" rel="stylesheet" type="text/css">
-		<link href="styles/components/loading-logo.css" rel="stylesheet" type="text/css">
+		<link href="styles/components/slider-styles.min.css" rel="stylesheet" type="text/css">
+		<link href="styles/components/section-nav.min.css" rel="stylesheet" type="text/css">
+		<link href="styles/components/loading-logo.min.css" rel="stylesheet" type="text/css">
 
-		<script src="scripts/loading-logo.js" type="application/javascript"></script>
-		<script src="scripts/mesh-properties.js" type="application/javascript"></script>
-		<script src="scripts/sub-page-nav.js" type="application/javascript"></script>
-		<script src="scripts/section-nav.js" type="application/javascript"></script>
+		<script defer src="scripts/loading-logo.min.js" type="application/javascript"></script>
+		<script defer src="scripts/mesh-properties.min.js" type="application/javascript"></script>
+		<script defer src="scripts/sub-page-nav.min.js" type="application/javascript"></script>
+		<script defer src="scripts/section-nav.min.js" type="application/javascript"></script>
 	</head>
 	<body>
 		<div id="loading-cover">
@@ -102,14 +102,14 @@
 		<main class="subpage-transition">
 			<section>
 				<video autoplay loop muted>
-					<source src="assets/videos/voronoi-clip.mp4" type="video/mp4">
+					<source src="assets/videos/voronoi-clip-1920x1080.mp4" type="video/mp4">
 				</video>
 				<h1>Mesh Editor</h1>
 				<div></div>
 				<section id="mesh-editor-description" class="split-section">
 					<h5 style="display: inline-block" data-nav-title="Description">
 						Desktop application designed to turn raster images into low poly vector art
-						<a class="section-link-badge" href="https://github.com/stasgora/mesh-editor" target="_blank" title="Mesh Editor GitHub project">
+						<a class="section-link-badge" href="https://github.com/stasgora/mesh-editor" target="_blank" rel="noopener" title="Mesh Editor GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#github-icon"></use>
 							</svg>
@@ -126,7 +126,7 @@
 							</ul>
 						</div>
 						<div>
-							<img src="assets/images/mesh-editor-pic.png" alt="Mesh Editor application">
+							<img src="assets/images/mesh-editor-pic.jpg" alt="Mesh Editor application">
 						</div>
 					</div>
 				</section>
@@ -191,13 +191,13 @@
 				<section>
 					<h3 style="display: inline-block" data-nav-title="Observetree Library">
 						Observetree Library
-						<a class="section-link-badge" href="https://github.com/stasgora/observetree" target="_blank" title="Observetree GitHub project">
+						<a class="section-link-badge" href="https://github.com/stasgora/observetree" target="_blank" rel="noopener" title="Observetree GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#github-icon"></use>
 							</svg>
 							<span>Github</span>
 						</a>
-						<a class="section-link-badge" href="https://search.maven.org/search?q=g:%22io.github.stasgora%22%20AND%20a:%22observetree%22" target="_blank" title="Observetree Maven artifact">
+						<a class="section-link-badge" href="https://search.maven.org/search?q=g:%22io.github.stasgora%22%20AND%20a:%22observetree%22" target="_blank" rel="noopener" title="Observetree Maven artifact">
 							<svg class="circle-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#maven-icon"></use>
 							</svg>
@@ -205,7 +205,7 @@
 						</a>
 					</h3>
 					<span>
-						Observetree is a library that extends the classic <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank">Observable pattern</a> by integrating it in a graph structure.
+						Observetree is a library that extends the classic <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank" rel="noopener">Observable pattern</a> by integrating it in a graph structure.
 					</span>
 					<ul style="margin-left: 2rem">
 						<li>Events are propagated through the Observable tree</li>
@@ -220,7 +220,7 @@
 			</section>
 			<section>
 				<video autoplay loop muted>
-					<source src="assets/videos/code-clip.mp4" type="video/mp4">
+					<source src="assets/videos/code-clip-1280x720.mp4" type="video/mp4">
 				</video>
 				<h1>Experience</h1>
 				<div></div>
@@ -318,7 +318,7 @@
 						<span>
 							WikiGraph
 						</span>
-						<a class="section-link-badge" href="https://github.com/wikitools/wikigraph" target="_blank" title="WikiGraph GitHub project">
+						<a class="section-link-badge" href="https://github.com/wikitools/wikigraph" target="_blank" rel="noopener" title="WikiGraph GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#github-icon"></use>
 							</svg>
@@ -332,8 +332,8 @@
 						<ul>
 							<li>Build in Unity in a team of 4</li>
 							<li>
-								Designed for the <a href="https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment" target="_blank">CAVE Environment</a> in the Gdańsk University of Technology
-								<a href="https://eti.pg.edu.pl/laboratorium-zanurzonej-wizualizacji-przestrzennej/about-lab" target="_blank">Immersive 3D Visualization Lab</a>
+								Designed for the <a href="https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment" target="_blank" rel="noopener">CAVE Environment</a> in the Gdańsk University of Technology
+								<a href="https://eti.pg.edu.pl/laboratorium-zanurzonej-wizualizacji-przestrzennej/about-lab" target="_blank" rel="noopener">Immersive 3D Visualization Lab</a>
 							</li>
 						</ul>
 					</div>
@@ -358,17 +358,17 @@
 		</nav>
 		<footer>
 			<section>
-				<a href="https://www.linkedin.com/in/stanis%C5%82aw-g%C3%B3ra-8602b8159/" target="_blank" title="LinkedIn">
+				<a href="https://www.linkedin.com/in/stanis%C5%82aw-g%C3%B3ra-8602b8159/" target="_blank" rel="noopener" title="LinkedIn">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<use xlink:href="#linkedIn-icon"></use>
 					</svg>
 				</a>
-				<a href="https://github.com/stasgora" target="_blank" title="GitHub">
+				<a href="https://github.com/stasgora" target="_blank" rel="noopener" title="GitHub">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<use xlink:href="#github-icon"></use>
 					</svg>
 				</a>
-				<a href="mailto:contact@sgora.dev" target="_blank" title="Email">
+				<a href="mailto:contact@sgora.dev" target="_blank" rel="noopener" title="Email">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<use xlink:href="#mail-icon"></use>
 					</svg>
