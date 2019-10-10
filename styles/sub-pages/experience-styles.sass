@@ -30,8 +30,9 @@ main
       +section-link-badge-colors($sec-acc-color, $bg-color)
 
     background-color: $bg-color
-    h3
-      justify-self: start
+    @media (min-width: $layout-breakpoint)
+      h3
+        justify-self: start
     h3, h5
       color: $accent-color
     > div:first-of-type
