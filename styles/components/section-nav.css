@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Aleo:400,700|Lato:400,600,700&display=swap");
 .section-nav-extended > div:nth-child(1) {
   top: calc(((.4vw + .4em) + 0.8rem) * 0 + 2vw + 1rem) !important;
   transition-delay: 0s !important;

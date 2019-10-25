@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Martel:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Aleo:400,700|Lato:400,600,700&display=swap");
 div, body, section, video, img {
   position: relative;
   display: block;
@@ -7,7 +7,7 @@ div, body, section, video, img {
 * {
   box-sizing: border-box;
   color: #c1d2e4;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html {
@@ -33,6 +33,10 @@ html {
     opacity: 0.2;
   }
 }
+li {
+  padding: 0.1rem 0;
+}
+
 body {
   margin: 0;
   min-height: 100%;
@@ -45,12 +49,12 @@ body h1, body h3, body h5 {
   line-height: 160%;
 }
 body h1, body h3 {
-  font-family: "Martel", serif;
+  font-family: "Aleo", serif;
   font-weight: 700;
 }
 body h1 {
   text-align: center;
-  font-size: calc(2vw + 1.2rem);
+  font-size: calc(2.4vw + 1.6rem);
 }
 body h3 {
   font-size: calc(1.1vw + 1rem);
@@ -86,7 +90,7 @@ body #loading-cover div svg {
   fill: #c1d2e4;
 }
 body #title {
-  font-family: "Martel", serif;
+  font-family: "Aleo", serif;
   font-weight: 700;
   font-size: calc(1.4vw + 0.7rem);
   padding-top: calc(2vw + 1rem);
@@ -154,9 +158,10 @@ body .section-link-badge > span {
   position: relative;
   display: block;
   padding: 0 calc(.2vw + .3rem);
-  font-family: "Martel", serif;
+  font-family: "Aleo", serif;
   line-height: 140%;
   font-size: calc(.6vw + .4rem) !important;
+  text-transform: uppercase;
 }
 body .section-link-badge > svg {
   border-radius: 50%;
