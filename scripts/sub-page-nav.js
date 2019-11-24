@@ -8,7 +8,7 @@ const unpinned = 'nav-unpinned';
 
 const lastSubpageKey = 'last-subpage';
 const subPageLabel = 'sub-page';
-let currentPage = 0;
+let currentPage = 1;
 
 const Page = Object.freeze({
 	MeshEditor: 0,
@@ -37,6 +37,7 @@ $(() => {
 		});
 	}, 1000);
 	bindScrollEvents();
+	changeNavButtons(currentPage);
 });
 
 function getURLHash() {
@@ -85,7 +86,7 @@ function changeSubpage(index, animate=true) {
 			}, 10);
 		}, 10);
 	} else
-		main.css('transform', index === 0 ? 'none' : 'translateX(-' + translation + '%)');
+		main.css('transform', 'translateX(-' + translation + '%)');
 	changeNavButtons(index);
 	sessionStorage.setItem(lastSubpageKey, index);
 	onSubPageChange(index);
