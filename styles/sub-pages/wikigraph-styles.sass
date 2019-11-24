@@ -1,0 +1,28 @@
+@import "../common/templates"
+@import "../common/variables"
+
+$sub-page-index: 3
+
+$accent-color: nth($accent-colors, $sub-page-index)
+$bg-color: nth($bg-colors, $sub-page-index)
+
+main > section:nth-child(#{$sub-page-index})
+  .section-link-badge
+    +section-link-badge-colors($accent-color, $bg-color)
+
+  background-color: $bg-color
+  h1
+    span
+      font: inherit
+      font-size: calc(1.8vw + 1.2rem)
+  h3, h5
+    color: $accent-color
+  > div:first-of-type
+    background: linear-gradient(transparent, $bg-color)
+  > div:last-child
+    position: absolute
+    bottom: 0
+    width: 100%
+    margin-top: 2rem
+    height: $bg-transition-size
+    background: linear-gradient($bg-color, $main-bg-color)

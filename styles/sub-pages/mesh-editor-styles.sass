@@ -10,7 +10,7 @@ $layout-breakpoint: 700px
 $accent-color: nth($accent-colors, $sub-page-index)
 $bg-color: nth($bg-colors, $sub-page-index)
 
-main > section:nth-child(1)
+main > section:nth-child(#{$sub-page-index})
   .section-link-badge
     +section-link-badge-colors($accent-color, $bg-color)
 
