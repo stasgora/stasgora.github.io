@@ -6,7 +6,7 @@ $(() => {
 	logoBox = $('#logo-box');
 	logo = $('#logo-box > div:first-child');
 
-	if(sessionStorage.getItem(introKey) !== introPlayed) {
+	if(sessionStorage.getItem(introKey) !== introPlayed && getURLHash() === null) {
 		setTimeout(() => {
 			$(logo).click(enterSite);
 		}, 2000);
@@ -45,9 +45,11 @@ function finishLoading() {
 }
 
 function skipLoading() {
-	let lastSubpage = sessionStorage.getItem(lastSubpageKey);
-	if(lastSubpage !== null)
-		setTimeout(() => changeSubpage(lastSubpage), 1);
+	let subpage = getURLHash();
+	if(subpage === null)
+		subpage = sessionStorage.getItem(lastSubpageKey);
+	if(subpage !== null)
+		setTimeout(() => changeSubpage(subpage), 1);
 	$('body').addClass('loaded');
 	logoBox.addClass('logo-box-pos');
 	logoBox.css('transition-property', 'none');

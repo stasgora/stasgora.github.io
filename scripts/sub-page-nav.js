@@ -10,6 +10,11 @@ const lastSubpageKey = 'last-subpage';
 const subpageCount = 2;
 let currentSubPage = 0;
 
+const locationHashes = {
+	"mesh-editor": 0,
+	"experience": 1
+};
+
 $(() => {
 	nav = $('nav');
 	main = $('main');
@@ -31,6 +36,15 @@ $(() => {
 	}, 1000);
 	bindScrollEvents();
 });
+
+function getURLHash() {
+	if(window.location.hash) {
+		const subPage = window.location.hash.substring(1);
+		if(subPage in locationHashes)
+			return locationHashes[subPage];
+	}
+	return null;
+}
 
 function bindScrollEvents() {
 	//buttons
