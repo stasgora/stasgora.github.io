@@ -1,5 +1,6 @@
 @import "../common/templates"
 @import "../common/variables"
+@import "../common/layouts"
 
 $sub-page-index: 3
 
@@ -10,19 +11,14 @@ main > section:nth-child(#{$sub-page-index})
   .section-link-badge
     +section-link-badge-colors($accent-color, $bg-color)
 
-  background-color: $bg-color
   h1
     span
       font: inherit
       font-size: calc(1.8vw + 1.2rem)
-  h3, h5
-    color: $accent-color
-  > div:first-of-type
-    background: linear-gradient(transparent, $bg-color)
-  > div:last-child
-    position: absolute
-    bottom: 0
+  +sub-page($bg-color, $accent-color)
+
+  img
+    +relative-block
     width: 100%
-    margin-top: 2rem
-    height: $bg-transition-size
-    background: linear-gradient($bg-color, $main-bg-color)
+    @media (min-width: $layout-breakpoint)
+      margin-top: 2rem

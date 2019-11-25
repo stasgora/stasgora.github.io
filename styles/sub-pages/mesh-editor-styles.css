@@ -1,4 +1,29 @@
 @import url("https://fonts.googleapis.com/css?family=Aleo:400,700|Lato:400,600,700&display=swap");
+.split-section > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh 0;
+}
+.split-section > div > div {
+  max-width: 50%;
+}
+.split-section > div > div:nth-child(2) {
+  padding: 0 calc(2vw + 1rem);
+  box-sizing: content-box;
+}
+@media (max-width: 700px) {
+  .split-section > div {
+    flex-direction: column;
+  }
+  .split-section > div > div {
+    max-width: 100%;
+  }
+  .split-section > div > div:nth-child(2) {
+    padding: calc(2vw + 1rem) calc(2vw + 1rem);
+  }
+}
+
 main > section:nth-child(1) {
   background-color: #243f4c;
 }
@@ -56,31 +81,6 @@ main > section:nth-child(1) section:not(:first-child) > span {
 }
 main > section:nth-child(1) section:not(:first-child) span, main > section:nth-child(1) section:not(:first-child) ul {
   font-size: 1.1rem;
-}
-
-.split-section > div {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 1vh 0;
-}
-.split-section > div > div {
-  max-width: 50%;
-}
-.split-section > div > div:nth-child(2) {
-  padding: 0 calc(2vw + 1rem);
-  box-sizing: content-box;
-}
-@media (max-width: 700px) {
-  .split-section > div {
-    flex-direction: column;
-  }
-  .split-section > div > div {
-    max-width: 100%;
-  }
-  .split-section > div > div:nth-child(2) {
-    padding: calc(2vw + 1rem) calc(2vw + 1rem);
-  }
 }
 
 #mesh-editor-description > div img {
