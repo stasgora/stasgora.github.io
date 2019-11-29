@@ -7,11 +7,20 @@ $sub-page-index: 3
 $accent-color: nth($accent-colors, $sub-page-index)
 $bg-color: nth($bg-colors, $sub-page-index)
 
+$logo-size: '12vw + 2rem'
+$logo-top: '4vw + 2rem'
+
 main > section:nth-child(#{$sub-page-index})
   .section-link-badge
     +section-link-badge-colors($accent-color, $bg-color)
 
+  img:first-of-type
+    position: absolute
+    width: calc(#{$logo-size})
+    margin: 0 calc((100vw - (#{$logo-size})) / 2)
+    top: calc(#{$logo-top})
   h1
+    top: calc(#{$logo-top} + #{$logo-size} - 1rem)
     span
       font: inherit
       font-size: calc(1.8vw + 1.2rem)
