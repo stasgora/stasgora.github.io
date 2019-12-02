@@ -11,10 +11,12 @@ $logo-size: '12vw + 2rem'
 $logo-top: '4vw + 2rem'
 
 main > section:nth-child(#{$sub-page-index})
+  +sub-page($bg-color, $accent-color)
+
   .section-link-badge
     +section-link-badge-colors($accent-color, $bg-color)
 
-  img:first-of-type
+  > img:first-of-type
     position: absolute
     width: calc(#{$logo-size})
     margin: 0 calc((100vw - (#{$logo-size})) / 2)
@@ -24,10 +26,13 @@ main > section:nth-child(#{$sub-page-index})
     span
       font: inherit
       font-size: calc(1.8vw + 1.2rem)
-  +sub-page($bg-color, $accent-color)
 
-  img
-    +relative-block
-    width: 100%
-    @media (min-width: $layout-breakpoint)
-      margin-top: 2rem
+  > section:nth-of-type(2) > *:not(h3)
+    margin-left: 2rem
+    ul
+      > li
+        font-weight: bold
+      ul
+        font-size: 1rem
+        > li
+          font-weight: normal

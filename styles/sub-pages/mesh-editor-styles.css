@@ -1,31 +1,80 @@
 @import url("https://fonts.googleapis.com/css?family=Aleo:400,700|Lato:400,600,700&display=swap");
-.split-section > div {
+.split-img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .split-img {
+    margin-top: 2rem;
+  }
+}
+
+.tool-list {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+.tool-list > li {
+  font-weight: 700;
+}
+.tool-list > li > span {
+  color: #91a1af;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+.tool-list > li > span:after {
+  content: ": ";
+}
+
+.split-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 1vh 0;
 }
-.split-section > div > div {
+.split-section > div {
   max-width: 50%;
 }
-.split-section > div > div:nth-child(2) {
+.split-section > div:nth-child(2) {
   padding: 0 calc(2vw + 1rem);
   box-sizing: content-box;
 }
 @media (max-width: 700px) {
-  .split-section > div {
+  .split-section {
     flex-direction: column;
   }
-  .split-section > div > div {
+  .split-section > div {
     max-width: 100%;
   }
-  .split-section > div > div:nth-child(2) {
+  .split-section > div:nth-child(2) {
     padding: calc(2vw + 1rem) calc(2vw + 1rem);
   }
 }
 
 main > section:nth-child(1) {
   background-color: #243f4c;
+}
+main > section:nth-child(1) h3, main > section:nth-child(1) h5 {
+  color: #429252;
+}
+main > section:nth-child(1) > div:first-of-type {
+  background: linear-gradient(transparent, #243f4c);
+}
+main > section:nth-child(1) > div:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+  height: 3rem;
+  background: linear-gradient(#243f4c, #222d32);
+}
+main > section:nth-child(1) section:not(:first-child) {
+  font-size: 1.1rem;
+}
+main > section:nth-child(1) section:not(:first-child) > span {
+  display: block;
+  margin-left: 2rem;
 }
 main > section:nth-child(1) .section-link-badge {
   background-color: #429252;
@@ -60,38 +109,6 @@ main > section:nth-child(1) .section-link-badge:hover > svg.circle-badge {
 }
 main > section:nth-child(1) > video {
   transform: scale(-1);
-}
-main > section:nth-child(1) h3, main > section:nth-child(1) h5 {
-  color: #429252;
-}
-main > section:nth-child(1) > div:first-of-type {
-  background: linear-gradient(transparent, #243f4c);
-}
-main > section:nth-child(1) > div:last-child {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  margin-top: 2rem;
-  height: 3rem;
-  background: linear-gradient(#243f4c, #222d32);
-}
-main > section:nth-child(1) section:not(:first-child) > span {
-  display: block;
-  margin-left: 2rem;
-}
-main > section:nth-child(1) section:not(:first-child) span, main > section:nth-child(1) section:not(:first-child) ul {
-  font-size: 1.1rem;
-}
-
-#mesh-editor-description > div img {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-@media (min-width: 700px) {
-  #mesh-editor-description > div img {
-    margin-top: 2rem;
-  }
 }
 
 #mesh-properties > div > div:nth-child(1) > div:not(.mesh-property) {

@@ -1,7 +1,5 @@
 @import "../common/variables"
 
-$layout-breakpoint: 700px
-
 =sub-page($bg-color, $accent-color)
   background-color: $bg-color
   h3, h5
@@ -16,21 +14,26 @@ $layout-breakpoint: 700px
     height: $bg-transition-size
     background: linear-gradient($bg-color, $main-bg-color)
 
-.split-section
-  > div
-    display: flex
-    justify-content: space-evenly
-    align-items: center
-    padding: 1vh 0
-    > div
-      max-width: 50%
-    > div:nth-child(2)
-      padding: 0 calc(2vw + 1rem)
-      box-sizing: content-box
+  section:not(:first-child)
+    font-size: 1.1rem
+    > span
+      display: block
+      margin-left: 2rem
 
-    @media (max-width: $layout-breakpoint)
-      flex-direction: column
-      > div
-        max-width: 100%
-      > div:nth-child(2)
-        padding: calc(2vw + 1rem) calc(2vw + 1rem)
+.split-section
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  padding: 1vh 0
+  > div
+    max-width: 50%
+  > div:nth-child(2)
+    padding: 0 calc(2vw + 1rem)
+    box-sizing: content-box
+
+  @media (max-width: $layout-breakpoint)
+    flex-direction: column
+    > div
+      max-width: 100%
+    > div:nth-child(2)
+      padding: calc(2vw + 1rem) calc(2vw + 1rem)

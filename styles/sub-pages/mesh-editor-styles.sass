@@ -11,27 +11,15 @@ $accent-color: nth($accent-colors, $sub-page-index)
 $bg-color: nth($bg-colors, $sub-page-index)
 
 main > section:nth-child(#{$sub-page-index})
+  +sub-page($bg-color, $accent-color)
   .section-link-badge
     +section-link-badge-colors($accent-color, $bg-color)
 
   > video
     transform: scale(-1)
-  +sub-page($bg-color, $accent-color)
-
-  section:not(:first-child)
-    > span
-      display: block
-      margin-left: 2rem
-    span, ul
-      font-size: 1.1rem
 
 #mesh-editor-description
   > div
-    img
-      +relative-block
-      width: 100%
-      @media (min-width: $layout-breakpoint)
-        margin-top: 2rem
 
 #mesh-properties
   > div
