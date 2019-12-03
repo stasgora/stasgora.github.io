@@ -72,9 +72,9 @@ main > section:nth-child(3) > div:last-child {
 main > section:nth-child(3) section:not(:first-child) {
   font-size: 1.1rem;
 }
-main > section:nth-child(3) section:not(:first-child) > span {
+main > section:nth-child(3) section:not(:first-child) > span, main > section:nth-child(3) section:not(:first-child) p {
   display: block;
-  margin-left: 2rem;
+  margin: 0 0 0 2rem;
 }
 main > section:nth-child(3) .section-link-badge {
   background-color: #2b55f1;
@@ -130,7 +130,25 @@ main > section:nth-child(3) > section:nth-of-type(2) > *:not(h3) ul ul {
   font-size: 1rem;
 }
 main > section:nth-child(3) > section:nth-of-type(2) > *:not(h3) ul ul > li {
+  color: #91a1af;
   font-weight: normal;
+  font-size: 0.9rem;
+}
+main > section:nth-child(3) > section:nth-of-type(3) a {
+  font-style: italic;
+  text-decoration-color: #91a1af;
+}
+main > section:nth-child(3) > section:nth-of-type(3) > div {
+  margin: 2rem calc(4vw) 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main > section:nth-child(3) > section:nth-of-type(3) > div img {
+  flex: 1;
+  margin: 1rem;
+  width: 30rem;
+  min-width: calc(10vw + 10rem);
 }
 
 /*# sourceMappingURL=wikigraph-styles.css.map */

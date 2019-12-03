@@ -35,4 +35,20 @@ main > section:nth-child(#{$sub-page-index})
       ul
         font-size: 1rem
         > li
-          font-weight: normal
+          +sub-text
+
+  > section:nth-of-type(3)
+    a
+      font-style: italic
+      text-decoration-color: $greyed-text-color
+
+    > div
+      margin: 2rem calc(4vw) 0
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+      img
+        flex: 1
+        margin: 1rem
+        width: 30rem
+        min-width: calc(10vw + 10rem)

@@ -37,6 +37,7 @@ function finishLoading() {
 
 			setTimeout(() => {
 				setupSectionNav();
+
 				logoBox.css('transition-property', 'none');
 			}, 1000);
 		}, 400);

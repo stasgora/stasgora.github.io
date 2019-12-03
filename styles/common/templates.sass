@@ -90,6 +90,11 @@
   @media (min-width: $layout-breakpoint)
     margin-top: 2rem
 
+@mixin sub-text()
+  color: $greyed-text-color
+  font-weight: normal
+  font-size: .9rem
+
 .tool-list
   margin-top: .5rem
   font-size: 1.1rem
@@ -97,8 +102,6 @@
   > li
     font-weight: 700
     > span
-      color: $greyed-text-color
-      font-weight: normal
-      font-size: .9rem
+      +sub-text
       &:after
         content: ": "

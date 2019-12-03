@@ -72,9 +72,9 @@ main > section:nth-child(1) > div:last-child {
 main > section:nth-child(1) section:not(:first-child) {
   font-size: 1.1rem;
 }
-main > section:nth-child(1) section:not(:first-child) > span {
+main > section:nth-child(1) section:not(:first-child) > span, main > section:nth-child(1) section:not(:first-child) p {
   display: block;
-  margin-left: 2rem;
+  margin: 0 0 0 2rem;
 }
 main > section:nth-child(1) .section-link-badge {
   background-color: #429252;
