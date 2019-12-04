@@ -147,7 +147,7 @@ main > section:nth-child(3) > section:nth-of-type(3) > div {
 main > section:nth-child(3) > section:nth-of-type(3) > div img {
   flex: 1;
   margin: 1rem;
-  width: 30rem;
+  width: 10rem;
   min-width: calc(10vw + 10rem);
 }
 
