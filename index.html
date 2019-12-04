@@ -66,8 +66,9 @@
 		        crossorigin="anonymous"></script>
 
 		<link href="styles/site-styles.min.css" rel="stylesheet" type="text/css">
-		<link href="styles/sub-pages/mesh-styles.min.css" rel="stylesheet" type="text/css">
+		<link href="styles/sub-pages/mesh-editor-styles.min.css" rel="stylesheet" type="text/css">
 		<link href="styles/sub-pages/experience-styles.min.css" rel="stylesheet" type="text/css">
+		<link href="styles/sub-pages/wikigraph-styles.min.css" rel="stylesheet" type="text/css">
 
 		<link href="styles/components/slider-styles.min.css" rel="stylesheet" type="text/css">
 		<link href="styles/components/section-nav.min.css" rel="stylesheet" type="text/css">
@@ -99,24 +100,24 @@
 			<div class="loading-anim"></div>
 			<div id="section-nav"></div>
 		</div>
-		<main class="subpage-transition">
-			<section>
+		<main class="subpage-transition" style="transform: translateX(-33.3333%)">
+			<section data-sub-page="Mesh Editor">
 				<video autoplay loop muted>
 					<source src="assets/videos/voronoi-clip-1920x1080.mp4" type="video/mp4">
 				</video>
 				<h1>Mesh Editor</h1>
 				<div></div>
-				<section id="mesh-editor-description" class="split-section">
+				<section id="mesh-editor-description">
 					<h5 style="display: inline-block" data-nav-title="Description">
 						Desktop application designed to turn raster images into low poly vector art
-						<a class="section-link-badge" href="https://github.com/stasgora/mesh-editor" target="_blank" rel="noopener" title="Mesh Editor GitHub project">
+						<a class="section-link-badge" href="https://github.com/stasgora/mesh-editor" target="_blank" rel="noopener noreferrer" title="Mesh Editor GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#github-icon"></use>
 							</svg>
 							<span>Github</span>
 						</a>
 					</h5>
-					<div>
+					<div class="split-section">
 						<div>
 							<ul>
 								<li>Live Delaunay Triangulation and dual Voronoi Diagram</li>
@@ -126,14 +127,14 @@
 							</ul>
 						</div>
 						<div>
-							<img src="assets/images/mesh-editor-pic.jpg" alt="Mesh Editor application">
+							<img class="split-img" src="assets/images/mesh-editor-pic.jpg" alt="Mesh Editor application">
 						</div>
 					</div>
 				</section>
-				<section id="mesh-properties" class="split-section">
+				<section id="mesh-properties">
 					<h3 data-nav-title="Layers showcase">Layers</h3>
 					<span>An interactive showcase</span>
-					<div>
+					<div class="split-section">
 						<div>
 							<div class="mesh-property">
 								<input id="tri-property" type="checkbox" data-svg-link="mesh-tri" checked>
@@ -191,13 +192,13 @@
 				<section>
 					<h3 style="display: inline-block" data-nav-title="Observetree Library">
 						Observetree Library
-						<a class="section-link-badge" href="https://github.com/stasgora/observetree" target="_blank" rel="noopener" title="Observetree GitHub project">
+						<a class="section-link-badge" href="https://github.com/stasgora/observetree" target="_blank" rel="noopener noreferrer" title="Observetree GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#github-icon"></use>
 							</svg>
 							<span>Github</span>
 						</a>
-						<a class="section-link-badge" href="https://search.maven.org/search?q=g:%22dev.sgora%22%20AND%20a:%22observetree%22" target="_blank" rel="noopener" title="Observetree Maven artifact">
+						<a class="section-link-badge" href="https://search.maven.org/search?q=g:%22dev.sgora%22%20AND%20a:%22observetree%22" target="_blank" rel="noopener noreferrer" title="Observetree Maven artifact">
 							<svg class="circle-badge" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#maven-icon"></use>
 							</svg>
@@ -205,7 +206,7 @@
 						</a>
 					</h3>
 					<span>
-						Observetree is a library that extends the classic <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank" rel="noopener">Observable pattern</a> by integrating it in a graph structure.
+						Observetree is a library that extends the classic <a href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank" rel="noopener noreferrer">Observable pattern</a> by integrating it in a graph structure.
 					</span>
 					<ul style="margin-left: 2rem">
 						<li>Events are propagated through the Observable tree</li>
@@ -218,7 +219,7 @@
 				</section>
 				<div></div>
 			</section>
-			<section>
+			<section data-sub-page="Experience">
 				<video autoplay loop muted>
 					<source src="assets/videos/code-clip-1280x720.mp4" type="video/mp4">
 				</video>
@@ -239,7 +240,7 @@
 					</div>
 					<div style="grid-area: tools">
 						<span>Tools</span>
-						<ul>
+						<ul class="tool-list">
 							<li><span>Version control</span>Git</li>
 							<li><span>Testing</span>JUnit, Mockito</li>
 							<li><span>Build automation</span>Maven</li>
@@ -252,9 +253,10 @@
 					</div>
 					<div style="grid-area: frameworks">
 						<span>Frameworks</span>
-						<ul>
+						<ul class="tool-list">
 							<li><span>Web</span>Angular, SASS</li>
 							<li><span>Mobile</span>Flutter</li>
+							<li><span>Games</span>Unity</li>
 						</ul>
 					</div>
 					<div style="grid-area: other">
@@ -262,6 +264,7 @@
 						<ul>
 							<li><span>Agile</span>Scrum</li>
 							<li>Linux user, bash</li>
+							<li>LaTeX</li>
 						</ul>
 					</div>
 				</section>
@@ -310,7 +313,7 @@
 						<span>
 							WikiGraph
 						</span>
-						<a class="section-link-badge" href="https://github.com/wikitools/wikigraph" target="_blank" rel="noopener" title="WikiGraph GitHub project">
+						<a class="section-link-badge" href="https://github.com/wikitools/wikigraph" target="_blank" rel="noopener noreferrer" title="WikiGraph GitHub project">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 								<use xlink:href="#github-icon"></use>
 							</svg>
@@ -324,12 +327,105 @@
 						<ul>
 							<li>Build in Unity in a team of 4</li>
 							<li>
-								Designed for the <a href="https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment" target="_blank" rel="noopener">CAVE Environment</a> in the Gdańsk University of Technology
-								<a href="https://eti.pg.edu.pl/laboratorium-zanurzonej-wizualizacji-przestrzennej/about-lab" target="_blank" rel="noopener">Immersive 3D Visualization Lab</a>
+								Designed for the <a href="https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment" target="_blank" rel="noopener noreferrer">CAVE Environment</a> in the Gdańsk University of Technology
+								<a href="https://eti.pg.edu.pl/laboratorium-zanurzonej-wizualizacji-przestrzennej/about-lab" target="_blank" rel="noopener noreferrer">Immersive 3D Visualization Lab</a>
 							</li>
 						</ul>
 					</div>
 				</section>
+			</section>
+			<section data-sub-page="Wiki Graph">
+				<video autoplay loop muted>
+					<source src="assets/videos/wikigraph-clip-1920x1080.mp4" type="video/mp4">
+				</video>
+				<img style="transform: rotate(-5deg)" src="assets/images/wikigraph/logo.png" alt="WikiGraph logo">
+				<h1>W<span>IKIGRAP</span>H</h1>
+				<div></div>
+				<section id="wikigraph-description">
+					<h5 style="display: inline-block" data-nav-title="Description">
+						Interactive 3D visualization of Wikipedia article connections in a graph structure
+						<a class="section-link-badge" href="https://github.com/wikitools/wikigraph" target="_blank" rel="noopener noreferrer" title="WikiGraph GitHub project">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+								<use xlink:href="#github-icon"></use>
+							</svg>
+							<span>Github</span>
+						</a>
+					</h5>
+					<div class="split-section">
+						<div>
+							<ul>
+								<li>Links between articles on a website represented as connections between the nodes of the graph</li>
+								<li>Connections divided into accessible groups that can be scrolled</li>
+								<li>Console with search functionality to quickly jump to a specific article</li>
+								<li>Hierarchy of categories containing articles represented to make navigation easier</li>
+								<li>Any wikipedia (en, pl...) can be turned into a data pack for the app through an automated process</li>
+							</ul>
+						</div>
+						<div>
+							<img class="split-img" src="assets/images/wikigraph/pic.png" alt="WikiGraph application">
+						</div>
+					</div>
+				</section>
+				<section>
+					<h3 data-nav-title="About Project">About</h3>
+					<span>
+						Realized in a <strong>team of 4</strong> friends as a Bachelor's thesis project in the <strong>Scrum</strong> methodology.
+					</span>
+					<div style="margin-top: 1rem" class="split-section">
+						<div>
+							Tools used:
+							<ul class="tool-list">
+								<li><span>Visualisation engine</span>Unity</li>
+								<li><span>Programming</span>C#</li>
+								<li><span>Data processing app</span>WPF .NET</li>
+								<li><span>Version control & Repository</span>Git & GitHub</li>
+								<li><span>Scrum project management</span>Jira</li>
+							</ul>
+						</div>
+						<div>
+							My roles:
+							<ul>
+								<li>
+									Team Leader
+									<ul>
+										<li>Comprehensive knowledge of project</li>
+										<li>Code reviews</li>
+										<li>Management & Meetings</li>
+									</ul>
+								</li>
+								<li>
+									Scrum Master
+									<ul>
+										<li>Filling the backlog</li>
+										<li>Organising sprints</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h3 data-nav-title="CAVE Laboratory">CAVE Laboratory</h3>
+					<p>
+						From the beginning WikiGraph was designed with a 360&#176; view in mind. Although it is fully functional on a normal PC,
+						to experience the true strength of this visualisation a VR equipment is needed. During the project our team worked with the
+						<a href="https://eti.pg.edu.pl/laboratorium-zanurzonej-wizualizacji-przestrzennej/about-lab" target="_blank" rel="noopener noreferrer">
+						Immersive 3D Visualization Lab</a> - a <a href="https://en.wikipedia.org/wiki/Cave_automatic_virtual_environment" target="_blank" rel="noopener noreferrer">CAVE</a>
+						type laboratory at the <a href="https://pg.edu.pl/en" target="_blank" rel="noopener noreferrer">Gdańsk University of Technology</a>,
+						to allow the app to run in their cubic virtual reality cave.
+					</p>
+					<div>
+						<img src="assets/images/wikigraph/cave/1.jpg" alt="WikiGraph CAVE test">
+						<img src="assets/images/wikigraph/cave/2.jpg" alt="WikiGraph CAVE test">
+						<img src="assets/images/wikigraph/cave/3.jpg" alt="WikiGraph CAVE test">
+						<img src="assets/images/wikigraph/cave/4.jpg" alt="WikiGraph CAVE test">
+						<img src="assets/images/wikigraph/cave/5.jpg" alt="WikiGraph CAVE test">
+						<img src="assets/images/wikigraph/cave/6.jpg" alt="WikiGraph CAVE test">
+						<img src="assets/images/wikigraph/cave/7.jpg" alt="WikiGraph CAVE test">
+						<img src="assets/images/wikigraph/cave/8.jpg" alt="WikiGraph CAVE test">
+					</div>
+				</section>
+				<div></div>
 			</section>
 		</main>
 		<nav>
@@ -350,17 +446,17 @@
 		</nav>
 		<footer>
 			<section>
-				<a href="https://www.linkedin.com/in/stanis%C5%82aw-g%C3%B3ra-8602b8159/" target="_blank" rel="noopener" title="LinkedIn">
+				<a href="https://www.linkedin.com/in/stanis%C5%82aw-g%C3%B3ra-8602b8159/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<use xlink:href="#linkedIn-icon"></use>
 					</svg>
 				</a>
-				<a href="https://github.com/stasgora" target="_blank" rel="noopener" title="GitHub">
+				<a href="https://github.com/stasgora" target="_blank" rel="noopener noreferrer" title="GitHub">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<use xlink:href="#github-icon"></use>
 					</svg>
 				</a>
-				<a href="mailto:contact@sgora.dev" target="_blank" rel="noopener" title="Email">
+				<a href="mailto:contact@sgora.dev" target="_blank" rel="noopener noreferrer" title="Email">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 						<use xlink:href="#mail-icon"></use>
 					</svg>

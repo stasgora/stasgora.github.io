@@ -1,4 +1,32 @@
 @import url("https://fonts.googleapis.com/css?family=Aleo:400,700|Lato:400,600,700&display=swap");
+.split-img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .split-img {
+    margin-top: 2rem;
+  }
+}
+
+.tool-list {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+.tool-list > li {
+  font-weight: 700;
+}
+.tool-list > li > span {
+  color: #91a1af;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+.tool-list > li > span:after {
+  content: ": ";
+}
+
 .section-nav-extended > div:nth-child(1) {
   top: calc(((.4vw + .4em) + 0.8rem) * 0 + 2vw + 1rem) !important;
   transition-delay: 0s !important;

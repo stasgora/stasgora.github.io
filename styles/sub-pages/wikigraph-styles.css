@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Aleo:400,700|Lato:400,600,700&display=swap");
+.split-img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .split-img {
+    margin-top: 2rem;
+  }
+}
+
+.tool-list {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+.tool-list > li {
+  font-weight: 700;
+}
+.tool-list > li > span {
+  color: #91a1af;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+.tool-list > li > span:after {
+  content: ": ";
+}
+
+.split-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1vh 0;
+}
+.split-section > div {
+  max-width: 50%;
+}
+.split-section > div:nth-child(2) {
+  padding: 0 calc(2vw + 1rem);
+  box-sizing: content-box;
+}
+@media (max-width: 700px) {
+  .split-section {
+    flex-direction: column;
+  }
+  .split-section > div {
+    max-width: 100%;
+  }
+  .split-section > div:nth-child(2) {
+    padding: calc(2vw + 1rem) calc(2vw + 1rem);
+  }
+}
+
+main > section:nth-child(3) {
+  background-color: #192437;
+}
+main > section:nth-child(3) h3, main > section:nth-child(3) h5 {
+  color: #2b55f1;
+}
+main > section:nth-child(3) > div:first-of-type {
+  background: linear-gradient(transparent, #192437);
+}
+main > section:nth-child(3) > div:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+  height: 3rem;
+  background: linear-gradient(#192437, #222d32);
+}
+main > section:nth-child(3) section:not(:first-child) {
+  font-size: 1.1rem;
+}
+main > section:nth-child(3) section:not(:first-child) > span, main > section:nth-child(3) section:not(:first-child) p {
+  display: block;
+  margin: 0 0 0 2rem;
+}
+main > section:nth-child(3) .section-link-badge {
+  background-color: #2b55f1;
+  border-radius: calc(.6vw + .4rem);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+main > section:nth-child(3) .section-link-badge:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+main > section:nth-child(3) .section-link-badge > span {
+  color: #192437;
+}
+main > section:nth-child(3) .section-link-badge > svg {
+  fill: #192437;
+}
+main > section:nth-child(3) .section-link-badge > svg.circle-badge {
+  background: #192437;
+  fill: #2b55f1;
+}
+main > section:nth-child(3) .section-link-badge:hover {
+  background-color: #111925;
+}
+main > section:nth-child(3) .section-link-badge:hover > span {
+  color: #2b55f1;
+}
+main > section:nth-child(3) .section-link-badge:hover > svg {
+  fill: #2b55f1;
+}
+main > section:nth-child(3) .section-link-badge:hover > svg.circle-badge {
+  background: #2b55f1;
+  fill: #111925;
+}
+main > section:nth-child(3) > img:first-of-type {
+  position: absolute;
+  width: calc(12vw + 2rem);
+  margin: 0 calc((100vw - (12vw + 2rem)) / 2);
+  top: calc(4vw + 2rem);
+}
+main > section:nth-child(3) h1 {
+  top: calc(4vw + 2rem + 12vw + 2rem - 1rem);
+}
+main > section:nth-child(3) h1 span {
+  font: inherit;
+  font-size: calc(1.8vw + 1.2rem);
+}
+main > section:nth-child(3) > section:nth-of-type(2) > *:not(h3) {
+  margin-left: 2rem;
+}
+main > section:nth-child(3) > section:nth-of-type(2) > *:not(h3) ul > li {
+  font-weight: bold;
+}
+main > section:nth-child(3) > section:nth-of-type(2) > *:not(h3) ul ul {
+  font-size: 1rem;
+}
+main > section:nth-child(3) > section:nth-of-type(2) > *:not(h3) ul ul > li {
+  color: #91a1af;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+main > section:nth-child(3) > section:nth-of-type(3) a {
+  font-style: italic;
+  text-decoration-color: #91a1af;
+}
+main > section:nth-child(3) > section:nth-of-type(3) > div {
+  margin: 2rem calc(4vw) 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+main > section:nth-child(3) > section:nth-of-type(3) > div img {
+  flex: 1;
+  margin: 1rem;
+  width: 10rem;
+  min-width: calc(10vw + 10rem);
+}
+
+/*# sourceMappingURL=wikigraph-styles.css.map */

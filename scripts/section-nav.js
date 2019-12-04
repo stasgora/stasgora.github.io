@@ -8,7 +8,8 @@ function setupSectionNav() {
 		sectionNav.toggleClass(sectionNavExtendedClass);
 		return false;
 	});
-	onSubPageChange(currentSubPage);
+	sectionNav.toggleClass(sectionNavExtendedClass);
+	onSubPageChange(currentPage);
 }
 
 function onSubPageChange(index) {

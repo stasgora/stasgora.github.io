@@ -1,0 +1,39 @@
+@import "../common/variables"
+
+=sub-page($bg-color, $accent-color)
+  background-color: $bg-color
+  h3, h5
+    color: $accent-color
+  > div:first-of-type
+    background: linear-gradient(transparent, $bg-color)
+  > div:last-child
+    position: absolute
+    bottom: 0
+    width: 100%
+    margin-top: 2rem
+    height: $bg-transition-size
+    background: linear-gradient($bg-color, $main-bg-color)
+
+  section:not(:first-child)
+    font-size: 1.1rem
+    > span, p
+      display: block
+      margin: 0 0 0 2rem
+
+.split-section
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  padding: 1vh 0
+  > div
+    max-width: 50%
+  > div:nth-child(2)
+    padding: 0 calc(2vw + 1rem)
+    box-sizing: content-box
+
+  @media (max-width: $layout-breakpoint)
+    flex-direction: column
+    > div
+      max-width: 100%
+    > div:nth-child(2)
+      padding: calc(2vw + 1rem) calc(2vw + 1rem)

@@ -1,68 +1,22 @@
 @import "../common/templates"
 @import "../common/variables"
+@import "../common/layouts"
 
 $sub-page-index: 1
 $property-mesh-size: calc(15vw + 10rem)
 $github-link-color: mix($text-color, $main-color, 25%)
 $checkbox-size: calc(.2vw + .8rem)
-$layout-breakpoint: 700px
 
 $accent-color: nth($accent-colors, $sub-page-index)
 $bg-color: nth($bg-colors, $sub-page-index)
 
-main > section:nth-child(1)
+main > section:nth-child(#{$sub-page-index})
+  +sub-page($bg-color, $accent-color)
   .section-link-badge
     +section-link-badge-colors($accent-color, $bg-color)
 
   > video
     transform: scale(-1)
-  background-color: $bg-color
-  h3, h5
-    color: $accent-color
-  > div:first-of-type
-    background: linear-gradient(transparent, $bg-color)
-  > div:last-child
-    position: absolute
-    bottom: 0
-    width: 100%
-    margin-top: 2rem
-    height: $bg-transition-size
-    background: linear-gradient($bg-color, $main-bg-color)
-
-  section:not(:first-child)
-    > span
-      display: block
-      margin-left: 2rem
-    span, ul
-      font-size: 1.1rem
-
-.split-section
-  > div
-    display: flex
-    justify-content: space-evenly
-    align-items: center
-    padding: 1vh 0
-    > div
-      max-width: 50%
-    > div:nth-child(2)
-      padding: 0 calc(2vw + 1rem)
-      box-sizing: content-box
-
-    @media (max-width: $layout-breakpoint)
-      flex-direction: column
-      > div
-        max-width: 100%
-      > div:nth-child(2)
-        padding: calc(2vw + 1rem) calc(2vw + 1rem)
-
-#mesh-editor-description
-  > div
-      img
-        +relative-block
-        width: 100%
-        @media (min-width: $layout-breakpoint)
-          margin-top: 2rem
-
 
 #mesh-properties
   > div

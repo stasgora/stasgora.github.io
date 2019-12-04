@@ -1,0 +1,54 @@
+@import "../common/templates"
+@import "../common/variables"
+@import "../common/layouts"
+
+$sub-page-index: 3
+
+$accent-color: nth($accent-colors, $sub-page-index)
+$bg-color: nth($bg-colors, $sub-page-index)
+
+$logo-size: '12vw + 2rem'
+$logo-top: '4vw + 2rem'
+
+main > section:nth-child(#{$sub-page-index})
+  +sub-page($bg-color, $accent-color)
+
+  .section-link-badge
+    +section-link-badge-colors($accent-color, $bg-color)
+
+  > img:first-of-type
+    position: absolute
+    width: calc(#{$logo-size})
+    margin: 0 calc((100vw - (#{$logo-size})) / 2)
+    top: calc(#{$logo-top})
+  h1
+    top: calc(#{$logo-top} + #{$logo-size} - 1rem)
+    span
+      font: inherit
+      font-size: calc(1.8vw + 1.2rem)
+
+  > section:nth-of-type(2) > *:not(h3)
+    margin-left: 2rem
+    ul
+      > li
+        font-weight: bold
+      ul
+        font-size: 1rem
+        > li
+          +sub-text
+
+  > section:nth-of-type(3)
+    a
+      font-style: italic
+      text-decoration-color: $greyed-text-color
+
+    > div
+      margin: 2rem calc(4vw) 0
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-around
+      img
+        flex: 1
+        margin: 1rem
+        width: 10rem
+        min-width: calc(10vw + 10rem)

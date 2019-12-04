@@ -6,7 +6,6 @@ $sub-page-index: 2
 $accent-color: nth($accent-colors, $sub-page-index)
 $bg-color: nth($bg-colors, $sub-page-index)
 $sec-acc-color: lighten(mix($accent-color, $main-color, 60%), 10%)
-$greyed-color: mix($text-color, $main-bg-color, 70%)
 
 $layout-breakpoint: 900px
 $grid-title-column-size: minmax(25%, auto)
@@ -22,7 +21,7 @@ $grid-title-column-size: minmax(25%, auto)
   text-transform: uppercase
 
 main
-  > section:nth-child(2)
+  > section:nth-child(#{$sub-page-index})
     .role
       margin-top: 1rem
       +role
@@ -45,7 +44,7 @@ main
       justify-items: center
       > div
         > span:nth-of-type(1)
-          font-size: 1.2rem
+          font-size: 1.3rem
           font-weight: 600
           color: $sec-acc-color
           +serif-font
@@ -58,22 +57,8 @@ main
         grid-template: "title title" auto "lang tools" auto "other frameworks" auto / 1fr 1fr
       @media (max-width: 600px)
         grid-template: "title title" auto "lang other" auto "lang frameworks" auto "tools tools" auto / 1fr 1fr
-
       > h3
         text-align: center
-      > div
-        > ul
-          margin-top: .5rem
-          font-size: 1.1rem
-          line-height: 1.4rem
-          > li
-            font-weight: 700
-            > span
-              color: $greyed-color
-              font-weight: normal
-              font-size: .9rem
-              &:after
-                content: ": "
 
     > section:nth-of-type(2)
       +one-section-grid
@@ -90,7 +75,7 @@ main
             color: $sec-acc-color
             font-size: 1.4rem
             > span
-              color: $greyed-color
+              color: $greyed-text-color
               margin-left: .3rem
               font-size: 1rem
           p, ul

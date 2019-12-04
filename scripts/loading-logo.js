@@ -37,6 +37,7 @@ function finishLoading() {
 
 			setTimeout(() => {
 				setupSectionNav();
+
 				logoBox.css('transition-property', 'none');
 			}, 1000);
 		}, 400);
@@ -49,7 +50,7 @@ function skipLoading() {
 	if(subpage === null)
 		subpage = sessionStorage.getItem(lastSubpageKey);
 	if(subpage !== null)
-		setTimeout(() => changeSubpage(subpage), 1);
+		setTimeout(() => changeSubpage(subpage, false), 1);
 	$('body').addClass('loaded');
 	logoBox.addClass('logo-box-pos');
 	logoBox.css('transition-property', 'none');
