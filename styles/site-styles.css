@@ -27,6 +27,20 @@
   content: ": ";
 }
 
+.sub-page-link {
+  text-transform: uppercase;
+  font-family: "Aleo", serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.sub-page-link > svg {
+  display: inline-block;
+  width: 2rem;
+  fill: #c1d2e4;
+}
+
 div, body, section, video, img {
   position: relative;
   display: block;
@@ -63,6 +77,11 @@ html {
 }
 li {
   padding: 0.1rem 0;
+}
+
+a {
+  font-style: italic;
+  text-decoration-color: #91a1af;
 }
 
 body {

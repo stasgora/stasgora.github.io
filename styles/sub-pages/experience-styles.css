@@ -27,6 +27,20 @@
   content: ": ";
 }
 
+.sub-page-link {
+  text-transform: uppercase;
+  font-family: "Aleo", serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.sub-page-link > svg {
+  display: inline-block;
+  width: 2rem;
+  fill: #c1d2e4;
+}
+
 main > section:nth-child(2) {
   background-color: #222d32;
 }
@@ -87,7 +101,7 @@ main > section:nth-child(2) > section {
   justify-items: center;
 }
 main > section:nth-child(2) > section > div > span:nth-of-type(1) {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #5153bd;
   font-family: "Aleo", serif;

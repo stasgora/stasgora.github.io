@@ -27,6 +27,20 @@
   content: ": ";
 }
 
+.sub-page-link {
+  text-transform: uppercase;
+  font-family: "Aleo", serif;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.sub-page-link > svg {
+  display: inline-block;
+  width: 2rem;
+  fill: #c1d2e4;
+}
+
 .split-section {
   display: flex;
   justify-content: space-evenly;
@@ -133,10 +147,6 @@ main > section:nth-child(3) > section:nth-of-type(2) > *:not(h3) ul ul > li {
   color: #91a1af;
   font-weight: normal;
   font-size: 0.9rem;
-}
-main > section:nth-child(3) > section:nth-of-type(3) a {
-  font-style: italic;
-  text-decoration-color: #91a1af;
 }
 main > section:nth-child(3) > section:nth-of-type(3) > div {
   margin: 2rem calc(4vw) 0;
