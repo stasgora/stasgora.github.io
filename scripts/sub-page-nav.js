@@ -81,12 +81,15 @@ function changeSubpage(index, animate=true) {
 		main.removeClass('subpage-transition');
 		setTimeout(() => {
 			main.css('transform', 'translateX(-' + translation + '%)');
+			$('html').scrollTop();
 			setTimeout(() => {
 				main.addClass('subpage-transition');
 			}, 10);
 		}, 10);
-	} else
+	} else {
 		main.css('transform', 'translateX(-' + translation + '%)');
+		$('html').animate({ scrollTop: 0 }, 900);
+	}
 	changeNavButtons(index);
 	sessionStorage.setItem(lastSubpageKey, index);
 	onSubPageChange(index);
