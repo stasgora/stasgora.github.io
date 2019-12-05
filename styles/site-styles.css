@@ -104,10 +104,10 @@ body h1 {
   font-size: calc(2.4vw + 1.6rem);
 }
 body h3 {
-  font-size: calc(1.1vw + 1rem);
+  font-size: calc(.7vw + 1.3rem);
 }
 body h5 {
-  font-size: calc(1.1vw + .7rem);
+  font-size: calc(.6vw + 1.1rem);
 }
 body #loading-cover {
   position: fixed;
