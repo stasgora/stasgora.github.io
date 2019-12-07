@@ -88,7 +88,7 @@ function changeSubpage(index, animate=true) {
 		}, 10);
 	} else {
 		main.css('transform', 'translateX(-' + translation + '%)');
-		$('html').animate({ scrollTop: 0 }, 900);
+		setTimeout(() => $('html').animate({ scrollTop: 0 }, 800), 800);
 	}
 	changeNavButtons(index);
 	sessionStorage.setItem(lastSubpageKey, index);

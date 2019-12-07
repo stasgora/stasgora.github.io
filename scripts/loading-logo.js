@@ -9,7 +9,7 @@ $(() => {
 	if(sessionStorage.getItem(introKey) !== introPlayed && getURLHash() === null) {
 		setTimeout(() => {
 			$(logo).click(enterSite);
-		}, 2000);
+		}, 1800);
 	} else skipLoading();
 });
 
